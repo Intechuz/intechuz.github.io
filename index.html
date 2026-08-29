@@ -36,7 +36,12 @@
     {"@type":"Offer","itemOffered":{"@type":"Service","name":"Фрезерная обработка ЧПУ 4 оси / 4-axis CNC milling"}},
     {"@type":"Offer","itemOffered":{"@type":"Service","name":"Электроэрозионная обработка / EDM machining"}},
     {"@type":"Offer","itemOffered":{"@type":"Service","name":"Плоская шлифовка / Surface grinding"}},
-    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Опрессовка гидравлических рукавов / Hydraulic hose crimping"}}
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Опрессовка гидравлических рукавов / Hydraulic hose crimping"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Ремонт машин впрыска (TPA) / Injection molding machine repair"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Термообработка / Thermal treatment"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"CAD проектирование и G-код / CAD design & G-code programming"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Серийное производство / Serial production"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Запчасти для машин впрыска / Spare parts supply"}}
   ]
 }
 </script>
@@ -49,7 +54,10 @@
     {"@type":"Question","name":"С какими материалами работает INTECH Engineering?","acceptedAnswer":{"@type":"Answer","text":"Инструментальные и закалённые стали (до HRC 60 через EDM), алюминиевые и медные сплавы. Изношенные поверхности восстанавливаются лазерной наплавкой."}},
     {"@type":"Question","name":"Как определяется цена на ремонт пресс-формы?","acceptedAnswer":{"@type":"Answer","text":"Отправьте чертёж или фото — в течение одного рабочего дня INTECH Engineering сообщит цену и сроки."}},
     {"@type":"Question","name":"В какие регионы работает INTECH Engineering?","acceptedAnswer":{"@type":"Answer","text":"Весь Узбекистан и Кыргызстан. Цех находится в Андижане — особенно удобно для заводов Ферганской долины."}},
-    {"@type":"Question","name":"Изготавливает ли INTECH новые детали пресс-форм?","acceptedAnswer":{"@type":"Answer","text":"Да — детали пресс-форм и штампов изготавливаются по чертежу или образцу заказчика."}}
+    {"@type":"Question","name":"Изготавливает ли INTECH новые детали пресс-форм?","acceptedAnswer":{"@type":"Answer","text":"Да — детали пресс-форм и штампов изготавливаются по чертежу или образцу заказчика."}},
+    {"@type":"Question","name":"Ремонтируете ли вы машины впрыска?","acceptedAnswer":{"@type":"Answer","text":"Да — ремонтируем HAITIAN, LS KOREA, POWERJET и другие бренды TPA: диагностика, ремонт, восстановление. Сроки в зависимости от неисправности."}},
+    {"@type":"Question","name":"Проектируете ли вы CAD чертежи и G-код?","acceptedAnswer":{"@type":"Answer","text":"Да — создаём чертежи в AutoCAD и NX, пишем G-код, выполняем симуляцию. Готово за 1–2 дня."}},
+    {"@type":"Question","name":"Выполняете ли вы термообработку?","acceptedAnswer":{"@type":"Answer","text":"Да — закалка до HRC 70, отпуск 24 часа, отжиг. Печь до 1250°C."}}
   ]
 }
 </script>
@@ -266,6 +274,11 @@ footer{padding:28px 0;font-family:var(--mono);font-size:.72rem;color:var(--steel
       <div class="card" data-code="SVC-05"><h3 data-i="sv5_h"></h3><p data-i="sv5_p"></p></div>
       <div class="card" data-code="SVC-06"><h3 data-i="sv6_h"></h3><p data-i="sv6_p"></p></div>
       <div class="card" data-code="SVC-07"><h3 data-i="sv7_h"></h3><p data-i="sv7_p"></p></div>
+      <div class="card" data-code="SVC-08"><h3 data-i="sv8_h"></h3><p data-i="sv8_p"></p></div>
+      <div class="card" data-code="SVC-09"><h3 data-i="sv9_h"></h3><p data-i="sv9_p"></p></div>
+      <div class="card" data-code="SVC-10"><h3 data-i="sv10_h"></h3><p data-i="sv10_p"></p></div>
+      <div class="card" data-code="SVC-11"><h3 data-i="sv11_h"></h3><p data-i="sv11_p"></p></div>
+      <div class="card" data-code="SVC-12"><h3 data-i="sv12_h"></h3><p data-i="sv12_p"></p></div>
     </div>
   </div>
 </section>
@@ -335,6 +348,9 @@ footer{padding:28px 0;font-family:var(--mono);font-size:.72rem;color:var(--steel
     <details class="faq"><summary data-i="fq3"></summary><div data-i="fa3"></div></details>
     <details class="faq"><summary data-i="fq4"></summary><div data-i="fa4"></div></details>
     <details class="faq"><summary data-i="fq5"></summary><div data-i="fa5"></div></details>
+    <details class="faq"><summary data-i="fq6"></summary><div data-i="fa6"></div></details>
+    <details class="faq"><summary data-i="fq7"></summary><div data-i="fa7"></div></details>
+    <details class="faq"><summary data-i="fq8"></summary><div data-i="fa8"></div></details>
   </div>
 </section>
 
@@ -380,6 +396,11 @@ uz:{
  sv5_h:"Elektroeroziya (EDM)",sv5_p:"Wire EDM, sinker EDM va EDM burg'ulash — qattiq materiallarda aniq kontur va teshiklar.",
  sv6_h:"Silliqlash",sv6_p:"Yassi yuzalarni mikron aniqlikda silliqlash.",
  sv7_h:"Gidravlik shlanglar (RVD)",sv7_p:"6–51 mm gidravlik shlanglarni yig'ish, presslash va bosim ostida sinovdan o'tkazish.",
+ sv8_h:"Injection mashinalar ta'miri",sv8_p:"HAITIAN, LS KOREA, POWERJET — har qanday TPA brendlari uchun ta'mir va qayta tiklash. Holatga qarab 1 kundan",
+ sv9_h:"Thermal ishlov (toblash/yumshatish)",sv9_p:"HRC 70 gacha hardening, 1 kunlik tempering, annealing. Furnace harorati — 1250°C.",
+ sv10_h:"Custom CAD & G-kod",sv10_p:"AutoCAD, NX — har qanday 3D chizmalar, G-kod, simulyatsiya. 1–2 kunlik leadtime.",
+ sv11_h:"Seriyali ishlab chiqarish",sv11_p:"1 dona yoki 10,000 dona — son va sifat chegarasi yo'q. Buyurtma asosida.",
+ sv12_h:"Spare parts savdosi",sv12_p:"Injection mashinalar uchun barcha ehtiyot qismlar: screw, barrel, nozzle, valve, heater, motor.",,
  e_title:"Jihozlar",e_c1:"Model",e_c2:"Vazifasi",e_c3:"Izoh",
  eq1:"Vertikal frezer markazi",eq2:"CNC tokarlik stanogi",eq3:"Sim bilan elektroeroziya kesish",eq4:"Elektroeroziya o'yish",eq5:"Elektroeroziya burg'ulash",eq6:"Yassi silliqlash",eq7:"Aniq payvandlash (lazer naplavka)",eq8:"Gidravlik shlang presslash",eq8b:"Bosim sinovi bilan",
  w_title:"Bajarilgan ishlar",w_ph:"FOTO — tez orada",
@@ -397,7 +418,10 @@ uz:{
  fq2:"Qanday materiallar bilan ishlaysizlar?",fa2:"Instrumental va toblangan po'latlar (EDM orqali HRC 60 gacha), alyuminiy va mis qotishmalari. Yeyilgan yuzalarni lazer naplavka bilan tiklaymiz.",
  fq3:"Narx qanday aniqlanadi?",fa3:"Chizma yoki foto yuborasiz — bir ish kuni ichida narx va muddat aytamiz. Detalni ko'rik uchun ustaxonaga olib kelishingiz ham mumkin.",
  fq4:"Qaysi hududlarga xizmat ko'rsatasizlar?",fa4:"Butun O'zbekiston va Qirg'iziston. Andijonda joylashganmiz — Farg'ona vodiysidagi zavodlar uchun ayniqsa qulay: bir kun ichida yetib boramiz.",
- fq5:"Yangi press-forma detallari ham yasaysizlarmi?",fa5:"Ha — press-forma va shtamp detallarini chizma yoki namuna asosida ishlab chiqaramiz."
+ fq5:"Yangi press-forma detallari ham yasaysizlarmi?",fa5:"Ha — press-forma va shtamp detallarini chizma yoki namuna asosida ishlab chiqaramiz.",
+ fq6:"Injection mashinalar ta'mirlaysizlarmi?",fa6:"Ha — HAITIAN, LS KOREA, POWERJET kabi har qanday TPA brendlarini ta'mirlaydi, diagnostika qilamiz va tiklashni bajaramiz. Vaqti xalqotga qarab.",
+ fq7:"Custom chizmalar va G-kod yozasizlarmi?",fa7:"Ha — AutoCAD va NX'da 3D chizmalar tayyorlaymiz, G-kod yozamiz va simulyatsiya qilamiz. 1–2 kunlik muddat.",
+ fq8:"Thermal treatment (hardening, annealing) qilasizlarmi?",fa8:"Ha — HRC 70 gacha hardening, 24 soatlik tempering, annealing. Furnach harorati 1250°C.",
 },
 ru:{
  nav_services:"Услуги",nav_equipment:"Оборудование",nav_works:"Работы",nav_clients:"Клиенты",nav_contact:"Контакты",
@@ -413,6 +437,11 @@ ru:{
  sv5_h:"Электроэрозия (EDM)",sv5_p:"Wire EDM, прошивной EDM и EDM-сверление — точные контуры и отверстия в закалённых материалах.",
  sv6_h:"Шлифовка",sv6_p:"Плоская шлифовка с микронной точностью.",
  sv7_h:"Гидравлические рукава (РВД)",sv7_p:"Сборка, опрессовка и испытание давлением рукавов 6–51 мм.",
+ sv8_h:"Ремонт машин впрыска (TPA)",sv8_p:"HAITIAN, LS KOREA, POWERJET — любые бренды литьевых машин. Диагностика, ремонт и восстановление. Сроки в зависимости от неисправности.",
+ sv9_h:"Термообработка",sv9_p:"Закалка до HRC 70, отпуск 24 часа, отжиг. Печь до 1250°C.",
+ sv10_h:"Проектирование CAD & G-код",sv10_p:"AutoCAD, NX — любые 3D чертежи, G-код, симуляция. Готово за 1–2 дня.",
+ sv11_h:"Серийное производство",sv11_p:"1 деталь или 10 000 — без ограничений по количеству и качеству. По заказу.",
+ sv12_h:"Поставка запчастей",sv12_p:"Все запасные части для литьевых машин: screw, barrel, nozzle, check valve, heater band, motor.",,
  e_title:"Оборудование",e_c1:"Модель",e_c2:"Назначение",e_c3:"Примечание",
  eq1:"Вертикальный фрезерный центр",eq2:"Токарный станок ЧПУ",eq3:"Электроэрозионная резка проволокой",eq4:"Прошивная электроэрозия",eq5:"Электроэрозионное сверление",eq6:"Плоская шлифовка",eq7:"Прецизионная сварка (лазерная наплавка)",eq8:"Опрессовка РВД",eq8b:"С испытанием давлением",
  w_title:"Выполненные работы",w_ph:"ФОТО — скоро",
@@ -430,7 +459,10 @@ ru:{
  fq2:"С какими материалами работаете?",fa2:"Инструментальные и закалённые стали (до HRC 60 через EDM), алюминиевые и медные сплавы. Изношенные поверхности восстанавливаем лазерной наплавкой.",
  fq3:"Как определяется цена?",fa3:"Отправьте чертёж или фото — в течение одного рабочего дня сообщим цену и сроки. Можно также привезти деталь на осмотр в цех.",
  fq4:"В какие регионы работаете?",fa4:"Весь Узбекистан и Кыргызстан. Мы находимся в Андижане — особенно удобно для заводов Ферганской долины: приезжаем в течение дня.",
- fq5:"Изготавливаете ли новые детали пресс-форм?",fa5:"Да — изготавливаем детали пресс-форм и штампов по чертежу или образцу."
+ fq5:"Изготавливаете ли новые детали пресс-форм?",fa5:"Да — изготавливаем детали пресс-форм и штампов по чертежу или образцу.",
+ fq6:"Ремонтируете ли машины впрыска?",fa6:"Да — ремонтируем HAITIAN, LS KOREA, POWERJET и другие бренды TPA: диагностика, ремонт, восстановление. Сроки в зависимости от неисправности.",
+ fq7:"Проектируете ли чертежи CAD и G-код?",fa7:"Да — создаём чертежи в AutoCAD и NX, пишем G-код, выполняем симуляцию. Готово за 1–2 дня.",
+ fq8:"Выполняете ли термообработку?",fa8:"Да — закалка до HRC 70, отпуск 24 часа, отжиг. Печь до 1250°C.",
 },
 en:{
  nav_services:"Services",nav_equipment:"Equipment",nav_works:"Works",nav_clients:"Clients",nav_contact:"Contact",
@@ -446,6 +478,11 @@ en:{
  sv5_h:"EDM machining",sv5_p:"Wire EDM, sinker EDM and EDM drilling — precise contours and holes in hardened materials.",
  sv6_h:"Surface grinding",sv6_p:"Flat surface grinding with micron-level accuracy.",
  sv7_h:"Hydraulic hoses",sv7_p:"Assembly, crimping and pressure testing of hydraulic hoses Ø6–51 mm.",
+ sv8_h:"Injection molding machine repair",sv8_p:"HAITIAN, LS KOREA, POWERJET — any TPA brand. Diagnostics, repair and restoration. Lead time depends on defect.",
+ sv9_h:"Thermal treatment",sv9_p:"Hardening to HRC 70, tempering 24 hours, annealing. Furnace up to 1250°C.",
+ sv10_h:"CAD design & G-code",sv10_p:"AutoCAD, NX — any 3D drawings, G-code, simulation. Ready in 1–2 days.",
+ sv11_h:"Serial production",sv11_p:"1 unit or 10,000 — no limits on quantity or quality. Made to order.",
+ sv12_h:"Spare parts supply",sv12_p:"All spare parts for injection molding machines: screw, barrel, nozzle, check valve, heater band, motor.",
  e_title:"Equipment",e_c1:"Model",e_c2:"Purpose",e_c3:"Notes",
  eq1:"Vertical machining center",eq2:"CNC lathe",eq3:"Wire EDM cutting",eq4:"Sinker EDM",eq5:"EDM drilling",eq6:"Surface grinding",eq7:"Precision welding (laser cladding)",eq8:"Hydraulic hose crimping",eq8b:"With pressure testing",
  w_title:"Our works",w_ph:"PHOTO — coming soon",
@@ -463,7 +500,10 @@ en:{
  fq2:"What materials do you work with?",fa2:"Tool and hardened steels (up to HRC 60 via EDM), aluminum and copper alloys. Worn surfaces are restored by laser cladding.",
  fq3:"How is the price determined?",fa3:"Send a drawing or photo — we quote price and lead time within one business day. You can also bring the part to our shop for inspection.",
  fq4:"Which regions do you serve?",fa4:"All of Uzbekistan and Kyrgyzstan. Based in Andijon — especially convenient for Fergana Valley plants: we can arrive within a day.",
- fq5:"Do you manufacture new mold components?",fa5:"Yes — we manufacture mold and die components from drawings or samples."
+ fq5:"Do you manufacture new mold components?",fa5:"Yes — we manufacture mold and die components from drawings or samples.",
+ fq6:"Do you repair injection molding machines?",fa6:"Yes — we repair HAITIAN, LS KOREA, POWERJET and other TPA brands: diagnostics, repair, restoration. Lead time depends on the defect.",
+ fq7:"Do you design CAD drawings and write G-code?",fa7:"Yes — we create drawings in AutoCAD and NX, write G-code and perform simulation. Ready in 1–2 days.",
+ fq8:"Do you provide thermal treatment?",fa8:"Yes — hardening to HRC 70, tempering 24 hours, annealing. Furnace up to 1250°C.",
 }
 };
 let lang = "uz";
