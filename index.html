@@ -6,6 +6,9 @@
 <title>INTECH Engineering — Precision CNC Toolshop, Andijon</title>
 <meta name="description" content="INTECH Engineering — прецизионный инструментальный цех с ЧПУ в Андижане. Ремонт пресс-форм, изготовление штампов, CNC обработка, EDM, шлифовка, опрессовка РВД.">
 <link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&family=Lora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <meta property="og:title" content="INTECH Engineering — Precision CNC Toolshop, Andijon">
 <meta property="og:description" content="Ремонт пресс-форм, изготовление штампов, CNC и EDM обработка в Андижане. Press-forma ta'miri va aniq CNC ishlov, Andijon.">
 <meta property="og:type" content="website">
@@ -73,14 +76,14 @@
   --spark:#2B4EA2;
   --navy:#1C2748;
   --panel:#FFFFFF;
-  --display:'Saira Condensed',sans-serif;
-  --body:'Inter',sans-serif;
-  --mono:'IBM Plex Mono',monospace;
+  --display:'Roboto',sans-serif;
+  --body:'Lora',serif;
+  --mono:'JetBrains Mono',monospace;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
-body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
 .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
 
 /* ---------- header ---------- */
@@ -111,7 +114,7 @@ nav a:hover,nav a:focus-visible{color:var(--spark)}
 section{padding:72px 0;border-bottom:1px solid var(--line)}
 
 /* ---------- hero ---------- */
-.hero{padding:88px 0 76px;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero{padding:120px 0 100px;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
 .hero::before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%232B4EA2' stroke-width='1'%3E%3Crect x='36' y='36' width='48' height='48'/%3E%3Cpath d='M60 26 L94 60 L60 94 L26 60 Z'/%3E%3Cpath d='M60 40 L74 46 L80 60 L74 74 L60 80 L46 74 L40 60 L46 46 Z'/%3E%3Ccircle cx='60' cy='60' r='4'/%3E%3Cg%3E%3Crect x='-9' y='-9' width='18' height='18'/%3E%3Cpath d='M0 -13 L13 0 L0 13 L-13 0 Z'/%3E%3C/g%3E%3Cg transform='translate(120 0)'%3E%3Crect x='-9' y='-9' width='18' height='18'/%3E%3Cpath d='M0 -13 L13 0 L0 13 L-13 0 Z'/%3E%3C/g%3E%3Cg transform='translate(0 120)'%3E%3Crect x='-9' y='-9' width='18' height='18'/%3E%3Cpath d='M0 -13 L13 0 L0 13 L-13 0 Z'/%3E%3C/g%3E%3Cg transform='translate(120 120)'%3E%3Crect x='-9' y='-9' width='18' height='18'/%3E%3Cpath d='M0 -13 L13 0 L0 13 L-13 0 Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");background-size:120px 120px;opacity:.14;pointer-events:none}
 .shamsa{position:absolute;right:-140px;top:20px;width:520px;height:520px;opacity:.09;pointer-events:none}
 @media(max-width:900px){.shamsa{display:none}}
@@ -222,6 +225,7 @@ footer{padding:28px 0;font-family:var(--mono);font-size:.72rem;color:var(--steel
     </nav>
     <div class="langs" role="group" aria-label="Language">
       <button data-lang="uz" class="on">UZ</button>
+      <button data-lang="uz_cy">УЗ</button>
       <button data-lang="ru">RU</button>
       <button data-lang="en">EN</button>
     </div>
@@ -337,7 +341,7 @@ footer{padding:28px 0;font-family:var(--mono);font-size:.72rem;color:var(--steel
     <div class="clients">
       <span>UZ KORAM</span><span>UZ SAEMYUNG</span><span>UZ DONG YANG</span>
       <span>UZ CLIMATE CONTROL</span><span>UZ ERAE ALTERNATOR</span>
-      <span>OLTINKO'L PLAST</span><span>UZ METR TECH</span><span>UZ CHASYS</span>
+      <span>OLTINKO'L PLAST</span><span>UZ METR TECH</span><span>UZ CHASSIS</span>
     </div>
   </div>
 </section>
@@ -424,6 +428,47 @@ uz:{
  fq6:"Injection mashinalar ta'mirlaysizlarmi?",fa6:"Ha — HAITIAN, LS KOREA, POWERJET kabi har qanday TPA brendlarini ta'mirlaydi, diagnostika qilamiz va tiklashni bajaramiz. Vaqti xalqotga qarab.",
  fq7:"Custom chizmalar va G-kod yozasizlarmi?",fa7:"Ha — AutoCAD va NX'da 3D chizmalar tayyorlaymiz, G-kod yozamiz va simulyatsiya qilamiz. 1–2 kunlik muddat.",
  fq8:"Thermal treatment (hardening, annealing) qilasizlarmi?",fa8:"Ha — HRC 70 gacha hardening, 24 soatlik tempering, annealing. Furnach harorati 1250°C.",
+},
+uz_cy:{
+ nav_services:"Хизматлар",nav_equipment:"Жиҳозлар",nav_works:"Ишлар",nav_clients:"Мижозлар",nav_contact:"Алоқа",
+ hero_h1:"Пресс-формалар та'мири ва аниқ ЧПУ ишлови бериш",
+ hero_p:"INTECH Engineering — Андижондаги аниқ механик ишлов устахонаси. Автокомпонент заводлари учун пресс-форма ва штамплларни тез, аниқ ва кафолат билан та'мирлаймиз ҳамда ишлаб чиқарамiz.",
+ cta_call:"Қўнғироқ қилиш",cta_services:"Хизматлар",
+ st_years:"йиллик тажриба",st_machines:"станок",st_clients:"йирик мижоз",st_team:"мутахассис",
+ s_title:"Хизматлар",
+ sv1_h:"Пресс-форма та'мири",sv1_p:"Пластмасса қуйиш пресс-формаларини диагностика ва тўлиқ та'миршаш, ишлаб чиқаришни тўхтатмасдан тез муддатда.",
+ sv2_h:"Штамп ва форма деталлари",sv2_p:"Пресс-форма ва штамп деталларини чизма ёки намуна асосида тайёрлаш.",
+ sv3_h:"ЧПУ токарлик ишлови",sv3_p:"Юқори аниқликдаги токарлик ишлови, резба ва мураккаб профиллар.",
+ sv4_h:"ЧПУ фрезерлик (4 ўқ)",sv4_p:"Мураккаб геометрияли деталлага 4 ўқли фрезерлик ишлов бериш.",
+ sv5_h:"Электроэрозия (EDM)",sv5_p:"Wire EDM, sinker EDM ва EDM бўрғуланш — қатт материаллорда аниқ контур ва тешиклар.",
+ sv6_h:"Силлиқлаш",sv6_p:"Ясси юзаларни микрон аниқликда силлиқлаш.",
+ sv7_h:"Гидравлик шлангллар (РВД)",sv7_p:"6–51 mm гидравлик шлангларни йиғиш, прессланш ва босим остида синовдан ўтказиш.",
+ sv8_h:"Injection машиналар та'мири",sv8_p:"HAITIAN, LS KOREA, POWERJET — ҳар қандай TPA брендлари учун та'мир ва қайта тиклаш. Ҳолатга қараб 1 кундан",
+ sv9_h:"Thermal ишлов (тобланш/юмшатиш)",sv9_p:"HRC 70 гача hardening, 1 кунлик tempering, annealing. Furnace ҳаротаи — 1250°C.",
+ sv10_h:"Custom CAD & G-код",sv10_p:"AutoCAD, NX — ҳар қандай 3D чизмалар, G-код, симулятсия. 1–2 кунлик leadtime.",
+ sv11_h:"Серияли ишлаб чиқариш",sv11_p:"1 дона ёки 10,000 дона — сон ва сифат чегараси йўқ. Буюртма асосида.",
+ sv12_h:"Spare parts сводаси",sv12_p:"Injection машиналар учун барча эҳтиёт қисмлар: screw, barrel, nozzle, valve, heater, motor.",
+ e_title:"Жиҳозлар",e_c1:"Модель",e_c2:"Вазифаси",e_c3:"Изоҳ",
+ eq1:"Вертикал фрезер маркази",eq2:"ЧПУ токарлик станоги",eq3:"Сим билан электроэрозия кесиш",eq4:"Электроэрозия ўйиш",eq5:"Электроэрозия бўрғуланш",eq6:"Ясси силлиқлаш",eq7:"Аниқ пайванданш (лазер напловка)",eq8:"Гидравлик шланг прессланш",eq8b:"Босим синови билан",eq9:"Loongwei ЧПУ токарлик маркази",eq10:"SHINEEAST air-driven босим тестер",
+ w_title:"Бажарилган ишлар",w_ph:"ФОТО — тез орада",
+ c_title:"Мижозлар",c_p:"Ўзбекистондаги йирик автокомпонент ишлаб чиқарувчиларига хизмат кўрсатамиз:",
+ k_title:"Алоқа",k_phone:"ТЕЛЕФОН",k_addr:"МАНЗИЛ",k_addr_v:"Industrial кўчаси 1/22, Андижон (Ирмаш заводи ёнида)",
+ k_hours:"ИШ ВАҚТИ",k_hours_v:"Ду–Ша 08:30–19:00",
+ k_note:"Чизма ёки намуна юборинг — бир иш кунида нарх ва муддатни айтамиз.",
+ p_title:"Иш жараёни",
+ pr1_h:"Сўров",pr1_p:"Чизма, фото ёки намунани телефон, Telegram ёки email орқали юбораси.",
+ pr2_h:"Нарх ва мудdat",pr2_p:"Диагностика асосида бир иш кунида аниқ нарх ва муддатни таклиф этамиз.",
+ pr3_h:"Ишлов / та'мир",pr3_p:"ЧПУ, EDM, силлиқлаш ва лазер напловка орқали ишлов бераимз.",
+ pr4_h:"Синов ва топшириш",pr4_p:"Ўлчовллар текширилиб, иш кафолат билан топширилади.",
+ f_title:"Кўп сўраладиган саволлар",
+ fq1:"Пресс-форма та'мири қанча вақт олади?",fa1:"Носозлик даражасига қараб 1 кундан 10 кунгача. Диагностикадан сўнг аниқ муддатни айтамиз; завод тўхтаб қолган шошилинч ҳолатлар биринчи навбатда бажарилади.",
+ fq2:"Қандай материаллар билан ишлайсизлар?",fa2:"Инструментал ва тобланган пўлатллар (EDM орқали HRC 60 гача), алюминий ва мис қотишмалари. Йейилган юзаларни лазер напловка билан тиклаимз.",
+ fq3:"Нарх қандай аниқланади?",fa3:"Чизма ёки фото юборасиз — бир иш кунида нарх ва мудат айтамиз. Деталини кўрик учун устахонага олиб келишингиз ҳам мумкин.",
+ fq4:"Қайси ҳудудларга хизмат кўрсаттасизлар?",fa4:"Бутун Ўзбекистон ва Қирғизистон. Андижонда жойлашганмиз — Фарғона водийсидаги заводлар учун айнича қуллай: бир кун ичида йетиб боримз.",
+ fq5:"Янги пресс-форма деталлари ҳам йасайсизларми?",fa5:"Ҳа — пресс-форма ва штамп деталларини чизма ёки намуна асосида ишлаб чиқараимз.",
+ fq6:"Injection машиналар та'мирлайсизларми?",fa6:"Ҳа — HAITIAN, LS KOREA, POWERJET каби ҳар қандай TPA брендларини та'миршайди, диагностика қилами ва тиклашни бажараmiz. Вақти халқотга қараб.",
+ fq7:"Custom чизмалар ва G-код йозасизларми?",fa7:"Ҳа — AutoCAD ва NX'да 3D чизмалар тайёрлаймиз, G-код йозамиз ва симулятсия қилами. 1–2 кунлик мудат.",
+ fq8:"Thermal treatment (hardening, annealing) қиласизларми?",fa8:"Ҳа — HRC 70 гача hardening, 24 соатлик tempering, annealing. Furnach ҳаротаи 1250°C.",
 },
 ru:{
  nav_services:"Услуги",nav_equipment:"Оборудование",nav_works:"Работы",nav_clients:"Клиенты",nav_contact:"Контакты",
