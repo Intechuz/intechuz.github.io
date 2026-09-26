@@ -1,568 +1,118 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uz">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>INTECH Engineering — Precision CNC Toolshop, Andijon</title>
-<meta name="description" content="INTECH Engineering — прецизионный инструментальный цех с ЧПУ в Андижане. Ремонт пресс-форм, изготовление штампов, CNC обработка, EDM, шлифовка, опрессовка РВД.">
-<link rel="icon" type="image/png" href="favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&family=Lora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<meta property="og:title" content="INTECH Engineering — Precision CNC Toolshop, Andijon">
-<meta property="og:description" content="Ремонт пресс-форм, изготовление штампов, CNC и EDM обработка в Андижане. Press-forma ta'miri va aniq CNC ishlov, Andijon.">
-<meta property="og:type" content="website">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "INTECH Engineering",
-  "legalName": "INTECH TA'MINOT MCHJ",
-  "description": "Прецизионный инструментальный цех с ЧПУ в Андижане: ремонт пресс-форм, изготовление деталей пресс-форм и штампов, токарная и фрезерная обработка ЧПУ, электроэрозионная обработка (EDM), плоская шлифовка, лазерная наплавка, опрессовка гидравлических рукавов 6–51 мм.",
-  "telephone": "+998902682323",
-  "email": "2682323@gmail.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Industrial ko'chasi 1/22",
-    "addressLocality": "Andijon",
-    "addressRegion": "Andijon Region",
-    "addressCountry": "UZ"
-  },
-  "openingHours": "Mo-Sa 08:30-19:00",
-  "areaServed": ["Uzbekistan", "Kyrgyzstan"],
-  "knowsLanguage": ["uz", "ru", "en"],
-  "sameAs": ["https://www.instagram.com/intech.cnc"],
-  "makesOffer": [
-    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Ремонт пресс-форм / Injection mold repair"}},
-    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Изготовление деталей пресс-форм и штампов / Mold & die components"}},
-    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Токарная обработка ЧПУ / CNC turning"}},
-    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Фрезерная обработка ЧПУ 4 оси / 4-axis CNC milling"}},
-    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Электроэрозионная обработка / EDM machining"}},
-    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Плоская шлифовка / Surface grinding"}},
-    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Опрессовка гидравлических рукавов / Hydraulic hose crimping"}},
-    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Ремонт машин впрыска (TPA) / Injection molding machine repair"}},
-    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Термообработка / Thermal treatment"}},
-    {"@type":"Offer","itemOffered":{"@type":"Service","name":"CAD проектирование и G-код / CAD design & G-code programming"}},
-    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Серийное производство / Serial production"}},
-    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Запчасти для машин впрыска / Spare parts supply"}}
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {"@type":"Question","name":"Сколько занимает ремонт пресс-формы?","acceptedAnswer":{"@type":"Answer","text":"От 1 до 10 дней в зависимости от неисправности. Точный срок сообщается после диагностики; срочные случаи с остановкой производства выполняются в первую очередь."}},
-    {"@type":"Question","name":"С какими материалами работает INTECH Engineering?","acceptedAnswer":{"@type":"Answer","text":"Инструментальные и закалённые стали (до HRC 60 через EDM), алюминиевые и медные сплавы. Изношенные поверхности восстанавливаются лазерной наплавкой."}},
-    {"@type":"Question","name":"Как определяется цена на ремонт пресс-формы?","acceptedAnswer":{"@type":"Answer","text":"Отправьте чертёж или фото — в течение одного рабочего дня INTECH Engineering сообщит цену и сроки."}},
-    {"@type":"Question","name":"В какие регионы работает INTECH Engineering?","acceptedAnswer":{"@type":"Answer","text":"Весь Узбекистан и Кыргызстан. Цех находится в Андижане — особенно удобно для заводов Ферганской долины."}},
-    {"@type":"Question","name":"Изготавливает ли INTECH новые детали пресс-форм?","acceptedAnswer":{"@type":"Answer","text":"Да — детали пресс-форм и штампов изготавливаются по чертежу или образцу заказчика."}},
-    {"@type":"Question","name":"Ремонтируете ли вы машины впрыска?","acceptedAnswer":{"@type":"Answer","text":"Да — ремонтируем HAITIAN, LS KOREA, POWERJET и другие бренды TPA: диагностика, ремонт, восстановление. Сроки в зависимости от неисправности."}},
-    {"@type":"Question","name":"Проектируете ли вы CAD чертежи и G-код?","acceptedAnswer":{"@type":"Answer","text":"Да — создаём чертежи в AutoCAD и NX, пишем G-код, выполняем симуляцию. Готово за 1–2 дня."}},
-    {"@type":"Question","name":"Выполняете ли вы термообработку?","acceptedAnswer":{"@type":"Answer","text":"Да — закалка до HRC 70, отпуск 24 часа, отжиг. Печь до 1250°C."}}
-  ]
-}
-</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-:root{
-  --paper:#F5F6F7;
-  --ink:#171B1F;
-  --steel:#5B6670;
-  --line:#C9CED3;
-  --spark:#2B4EA2;
-  --navy:#1C2748;
-  --panel:#FFFFFF;
-  --display:'Roboto',sans-serif;
-  --body:'Lora',serif;
-  --mono:'JetBrains Mono',monospace;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
-body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
-
-/* ---------- header ---------- */
-header{position:sticky;top:0;z-index:50;background:rgba(245,246,247,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.hbar{display:flex;align-items:center;justify-content:space-between;height:60px}
-.logo{font-family:var(--display);font-weight:700;font-size:1.5rem;letter-spacing:.04em;text-decoration:none;color:var(--ink)}
-.logo b{color:var(--spark)}
-nav{display:flex;gap:22px}
-nav a{font-size:.85rem;font-weight:500;color:var(--steel);text-decoration:none}
-nav a:hover,nav a:focus-visible{color:var(--spark)}
-.langs{display:flex;border:1px solid var(--line);border-radius:4px;overflow:hidden}
-.langs button{border:0;background:transparent;font-family:var(--mono);font-size:.75rem;padding:6px 10px;cursor:pointer;color:var(--steel)}
-.langs button.on{background:var(--ink);color:#fff}
-.langs button:focus-visible{outline:2px solid var(--spark);outline-offset:-2px}
-@media(max-width:760px){nav{display:none}}
-
-/* ---------- dimension-line section titles (signature) ---------- */
-.dim{display:flex;align-items:center;gap:14px;margin-bottom:34px}
-.dim .arr{flex:1;height:1px;background:var(--ink);position:relative}
-.dim .arr::before,.dim .arr::after{content:"";position:absolute;top:-3.5px;border-top:4px solid transparent;border-bottom:4px solid transparent}
-.dim .arr.l::before{left:0;border-right:7px solid var(--ink)}
-.dim .arr.r::after{right:0;border-left:7px solid var(--ink)}
-.dim h2{font-family:var(--display);font-weight:600;font-size:1.9rem;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
-.dim h2::before,.dim h2::after{content:"";display:inline-block;width:9px;height:9px;background:var(--spark);transform:rotate(45deg);vertical-align:middle;margin-bottom:4px}
-.dim h2::before{margin-right:14px}
-.dim h2::after{margin-left:14px}
-.dim .tol{font-family:var(--mono);font-size:.72rem;color:var(--spark);white-space:nowrap}
-section{padding:72px 0;border-bottom:1px solid var(--line)}
-
-/* ---------- hero ---------- */
-.hero{padding:120px 0 100px;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
-.hero::before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%232B4EA2' stroke-width='1'%3E%3Crect x='36' y='36' width='48' height='48'/%3E%3Cpath d='M60 26 L94 60 L60 94 L26 60 Z'/%3E%3Cpath d='M60 40 L74 46 L80 60 L74 74 L60 80 L46 74 L40 60 L46 46 Z'/%3E%3Ccircle cx='60' cy='60' r='4'/%3E%3Cg%3E%3Crect x='-9' y='-9' width='18' height='18'/%3E%3Cpath d='M0 -13 L13 0 L0 13 L-13 0 Z'/%3E%3C/g%3E%3Cg transform='translate(120 0)'%3E%3Crect x='-9' y='-9' width='18' height='18'/%3E%3Cpath d='M0 -13 L13 0 L0 13 L-13 0 Z'/%3E%3C/g%3E%3Cg transform='translate(0 120)'%3E%3Crect x='-9' y='-9' width='18' height='18'/%3E%3Cpath d='M0 -13 L13 0 L0 13 L-13 0 Z'/%3E%3C/g%3E%3Cg transform='translate(120 120)'%3E%3Crect x='-9' y='-9' width='18' height='18'/%3E%3Cpath d='M0 -13 L13 0 L0 13 L-13 0 Z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");background-size:120px 120px;opacity:.14;pointer-events:none}
-.shamsa{position:absolute;right:-140px;top:20px;width:520px;height:520px;opacity:.09;pointer-events:none}
-@media(max-width:900px){.shamsa{display:none}}
-.hero .wrap{position:relative}
-.eyebrow{font-family:var(--mono);font-size:.78rem;color:var(--spark);letter-spacing:.08em;margin-bottom:16px}
-.hero h1{font-family:var(--display);font-weight:700;font-size:clamp(2.4rem,6vw,4.4rem);line-height:1.04;letter-spacing:.01em;text-transform:uppercase;max-width:820px}
-.hero p{max-width:620px;margin-top:22px;color:var(--steel);font-size:1.05rem}
-.hero .cta{display:inline-flex;gap:14px;margin-top:34px;flex-wrap:wrap}
-.btn{display:inline-block;font-family:var(--display);font-size:1.05rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;padding:13px 28px;border-radius:3px}
-.btn.solid{background:var(--spark);color:#fff}
-.btn.solid:hover{background:#1C2748}
-.btn.ghost{border:1.5px solid var(--ink);color:var(--ink)}
-.btn.ghost:hover{background:var(--ink);color:#fff}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:60px}
-.stats div{background:var(--panel);padding:20px 18px}
-.stats b{display:block;font-family:var(--display);font-size:2rem;font-weight:700;color:var(--ink)}
-.stats span{font-size:.8rem;color:var(--steel)}
-@media(max-width:700px){.stats{grid-template-columns:repeat(2,1fr)}}
-
-/* ---------- services ---------- */
-.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
-.card{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--navy);border-radius:4px;padding:24px 22px;position:relative;transition:border-color .15s}
-.card:hover{border-top-color:var(--spark)}
-.card::before{content:attr(data-code);position:absolute;top:14px;right:16px;font-family:var(--mono);font-size:.68rem;color:#A9BBDD}
-.card h3{font-family:var(--display);font-size:1.3rem;font-weight:600;letter-spacing:.03em;text-transform:uppercase;margin-bottom:8px}
-.card p{font-size:.9rem;color:var(--steel)}
-
-/* ---------- equipment ---------- */
-.spec{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);font-size:.88rem}
-.spec th{font-family:var(--mono);font-size:.72rem;font-weight:500;text-transform:uppercase;letter-spacing:.06em;color:#fff;background:var(--navy);text-align:left;padding:12px 16px}
-.spec td{padding:12px 16px;border-bottom:1px solid var(--line);vertical-align:top}
-.spec tbody tr:nth-child(even) td{background:#EFF2F8}
-.spec td:first-child{font-family:var(--mono);font-size:.8rem;white-space:nowrap;color:var(--spark);font-weight:500}
-.spec tr:last-child td{border-bottom:0}
-.tblwrap{overflow-x:auto}
-
-/* ---------- gallery placeholders ---------- */
-.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px}
-.ph{aspect-ratio:4/3;border:1.5px dashed #A9BBDD;border-radius:4px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:var(--steel);background-color:var(--panel);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%232B4EA2' stroke-width='1'%3E%3Crect x='36' y='36' width='48' height='48'/%3E%3Cpath d='M60 26 L94 60 L60 94 L26 60 Z'/%3E%3Ccircle cx='60' cy='60' r='4'/%3E%3C/g%3E%3C/svg%3E");background-size:120px 120px;position:relative}
-.ph::before{content:"";position:absolute;inset:0;background:rgba(255,255,255,.88)}
-.ph svg,.ph span{position:relative}
-.ph svg{opacity:.5}
-.ph span{font-family:var(--mono);font-size:.7rem}
-
-/* ---------- clients ---------- */
-.clients{display:flex;flex-wrap:wrap;gap:12px}
-.clients span{font-family:var(--mono);font-size:.8rem;border:1px solid var(--line);background:var(--panel);border-radius:3px;padding:8px 14px;color:var(--steel)}
-
-/* ---------- process ---------- */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.step{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:22px 20px;position:relative}
-.step .n{font-family:var(--mono);font-size:.75rem;color:var(--spark);display:block;margin-bottom:10px}
-.step h3{font-family:var(--display);font-size:1.2rem;font-weight:600;letter-spacing:.03em;text-transform:uppercase;margin-bottom:6px}
-.step p{font-size:.88rem;color:var(--steel)}
-.step::after{content:"";position:absolute;right:-14px;top:50%;width:10px;height:10px;border-top:1.5px solid var(--spark);border-right:1.5px solid var(--spark);transform:translateY(-50%) rotate(45deg)}
-.step:last-child::after{display:none}
-@media(max-width:900px){.steps{grid-template-columns:1fr 1fr}.step::after{display:none}}
-@media(max-width:520px){.steps{grid-template-columns:1fr}}
-
-/* ---------- faq ---------- */
-.faq{background:var(--panel);border:1px solid var(--line);border-radius:4px;margin-bottom:12px}
-.faq summary{cursor:pointer;padding:16px 20px;font-weight:600;font-size:.95rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"";width:9px;height:9px;border-right:2px solid var(--spark);border-bottom:2px solid var(--spark);transform:rotate(45deg);transition:transform .15s;flex:none}
-.faq[open] summary::after{transform:rotate(-135deg)}
-.faq div{padding:0 20px 16px;color:var(--steel);font-size:.92rem}
-
-/* ---------- contact ---------- */
-.contact{display:grid;grid-template-columns:1.1fr .9fr;gap:40px}
-.crow{display:flex;gap:14px;margin-bottom:20px;align-items:baseline}
-.crow .k{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--spark);min-width:86px;font-weight:500}
-
-/* navy clients section */
-#clients{background-color:var(--navy);border-color:var(--navy);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='rgba(255,255,255,0.10)' stroke-width='1'%3E%3Crect x='36' y='36' width='48' height='48'/%3E%3Cpath d='M60 26 L94 60 L60 94 L26 60 Z'/%3E%3Cpath d='M60 40 L74 46 L80 60 L74 74 L60 80 L46 74 L40 60 L46 46 Z'/%3E%3Ccircle cx='60' cy='60' r='4'/%3E%3C/g%3E%3C/svg%3E");background-size:120px 120px}
-#clients .dim h2{color:#fff}
-#clients .dim h2::before,#clients .dim h2::after{background:#8FA9E0}
-#clients .dim .arr{background:rgba(255,255,255,.55)}
-#clients .arr.l::before{border-right-color:#fff}
-#clients .arr.r::after{border-left-color:#fff}
-#clients .tol{color:#8FA9E0}
-#clients p{color:#C6D1E8!important}
-#clients .clients span{border-color:rgba(255,255,255,.3);background:rgba(255,255,255,.06);color:#E8ECF4}
-.crow a{color:var(--ink);text-decoration:none;font-weight:500}
-.crow a:hover{color:var(--spark)}
-.mapbox{border:1px solid var(--navy);border-top:4px solid var(--spark);border-radius:4px;overflow:hidden;min-height:280px;background:var(--panel)}
-.mapbox iframe{width:100%;height:100%;min-height:280px;border:0;display:block}
-@media(max-width:760px){.contact{grid-template-columns:1fr}}
-
-.orn{height:46px;background-color:#1C2748;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='46' height='46' viewBox='0 0 46 46'%3E%3Cg fill='none' stroke='rgba(255,255,255,0.4)' stroke-width='1'%3E%3Crect x='14' y='14' width='18' height='18'/%3E%3Cpath d='M23 10 L36 23 L23 36 L10 23 Z'/%3E%3Ccircle cx='23' cy='23' r='2'/%3E%3Cpath d='M0 0 L5 0 M0 0 L0 5 M46 0 L41 0 M46 0 L46 5 M0 46 L5 46 M0 46 L0 41 M46 46 L41 46 M46 46 L46 41'/%3E%3C/g%3E%3C/svg%3E");background-size:46px 46px}
-
-footer{padding:28px 0;font-family:var(--mono);font-size:.72rem;color:var(--steel);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1622">
+  <title>INTECH Engineering — Qolip ta’miri, CNC va EDM | Andijon</title>
+  <meta name="description" content="INTECH Engineering — Andijonda qolip ta’miri, CNC frezalash va tokarlik, EDM hamda aniq mexanik ishlov xizmatlari. Texnik so‘rov yuboring.">
+  <link rel="canonical" href="https://intechuz.github.io/">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://intechuz.github.io/">
+  <meta property="og:title" content="INTECH Engineering — Precision mold & die services">
+  <meta property="og:description" content="Qolip ta’miri, CNC va EDM xizmatlari. Andijon, O‘zbekiston.">
+  <meta property="og:image" content="https://intechuz.github.io/assets/mold-cnc-illustration.webp">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"LocalBusiness","name":"INTECH Engineering","legalName":"INTECH TA'MINOT MCHJ","url":"https://intechuz.github.io/","telephone":"+998902682323","email":"2682323@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Industrial ko'chasi 1/22","addressLocality":"Andijon","addressCountry":"UZ"},"sameAs":["https://www.instagram.com/intech.cnc"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Mold and precision machining services","itemListElement":[{"@type":"OfferCatalog","name":"Injection mold repair"},{"@type":"OfferCatalog","name":"CNC milling and turning"},{"@type":"OfferCatalog","name":"EDM machining"}]}}
+  </script>
+  <style>
+    :root{--navy:#0b1622;--navy2:#102331;--teal:#53d8d0;--teal-dark:#157d79;--paper:#f3f6f6;--white:#fff;--ink:#13252f;--muted:#5a707b;--line:#d7e1e3;font-family:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16px;color:var(--ink);background:var(--paper)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:82px}body{margin:0;min-width:320px}img{display:block;max-width:100%}a{color:inherit}button,select{font:inherit}button{cursor:pointer}::selection{background:#85e8e1;color:#0b1622}:focus-visible{outline:3px solid #f1b45c;outline-offset:3px}
+    .container{max-width:1240px;margin:auto;padding:0 30px}.skip{position:absolute;top:-100px;left:12px;background:var(--teal);color:var(--navy);padding:10px 14px;z-index:100}.skip:focus{top:10px}
+    .site-header{position:sticky;top:0;z-index:50;background:rgba(11,22,34,.96);border-bottom:1px solid #2b4550;backdrop-filter:blur(14px);color:#eaf4f4}.header-inner{min-height:76px;display:flex;align-items:center;gap:25px}
+    .logo{display:flex;align-items:center;gap:11px;text-decoration:none;flex:none}.logo-mark{width:36px;height:36px;object-fit:contain;filter:brightness(0) invert(1)}.logo-name{font-family:Manrope,sans-serif;font-size:17px;font-weight:800;letter-spacing:.09em;line-height:1}.logo-name small{display:block;color:#92b4ba;font-family:"DM Sans",sans-serif;font-size:9px;font-weight:700;letter-spacing:.24em;margin-top:6px}
+    .nav{display:flex;align-items:center;gap:27px;margin-left:auto}.nav a{font-size:13px;font-weight:700;text-decoration:none;color:#bccdd0;transition:color .2s}.nav a:hover{color:var(--teal)}.header-right{display:flex;align-items:center;gap:16px}.languages{display:flex;border-left:1px solid #35505c;padding-left:14px;gap:3px}.languages button{background:none;color:#9fb7bd;border:0;padding:8px 6px;font-size:11px;font-weight:800;letter-spacing:.02em}.languages button.active{color:var(--teal)}.mobile-language{display:none}.header-cta{font-size:12px;font-weight:800;letter-spacing:.02em;border:1px solid #5fa5a3;border-radius:4px;padding:10px 13px;text-decoration:none;color:#d4f7f4;white-space:nowrap}.header-cta:hover{background:var(--teal);border-color:var(--teal);color:var(--navy)}.menu-toggle{display:none}
+    .hero{position:relative;background:var(--navy);color:#fff;min-height:650px;isolation:isolate;overflow:hidden}.hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 51%;z-index:-2}.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,17,29,.99) 0%,rgba(7,20,32,.92) 30%,rgba(7,20,32,.55) 57%,rgba(7,20,32,.05) 100%),linear-gradient(0deg,rgba(6,17,29,.64),transparent 32%);z-index:-1}.hero-inner{min-height:650px;display:flex;flex-direction:column;justify-content:center;padding-top:65px;padding-bottom:105px}.eyebrow{font-size:12px;letter-spacing:.17em;text-transform:uppercase;font-weight:800;color:var(--teal);display:flex;align-items:center;gap:12px}.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}.hero h1{font-family:Manrope,sans-serif;font-size:clamp(42px,6vw,78px);line-height:1.06;letter-spacing:-.055em;max-width:760px;margin:23px 0 23px;font-weight:800}.hero h1 em{font-style:normal;color:var(--teal)}.hero .lead{font-size:17px;line-height:1.65;max-width:570px;color:#d3e1e3;margin:0}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:33px}.button{min-height:49px;display:inline-flex;align-items:center;justify-content:center;gap:16px;padding:12px 21px;border-radius:4px;text-decoration:none;font-size:14px;font-weight:800;transition:transform .18s,background .18s,color .18s}.button:hover{transform:translateY(-2px)}.button-primary{background:var(--teal);color:var(--navy)}.button-primary:hover{background:#8ce9e2}.button-outline{color:white;border:1px solid #91abb4}.button-outline:hover{background:#fff;color:var(--navy)}.button .arrow{font-size:19px;line-height:1}.hero-bottom{position:absolute;bottom:0;left:0;right:0;border-top:1px solid #7e9ba455;background:#0b162299}.hero-bottom .container{display:flex;justify-content:space-between;gap:20px;padding-top:17px;padding-bottom:17px;color:#bbd2d5;font-size:12px;letter-spacing:.04em}.hero-bottom strong{color:#fff;font-weight:700}.image-disclaimer{font-size:11px;color:#b8d0d4}.hero-bottom .image-disclaimer{opacity:.8}
+    .section{padding:96px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:34px}.section-code{color:var(--teal-dark);font-size:12px;letter-spacing:.16em;font-weight:800;text-transform:uppercase}.section-head h2,.split-copy h2,.contact-content h2{font-family:Manrope,sans-serif;font-size:clamp(30px,3.6vw,48px);line-height:1.15;letter-spacing:-.045em;margin:10px 0 0}.section-intro{max-width:365px;color:var(--muted);font-size:15px;line-height:1.65;margin:0}
+    .services-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.service-card{background:var(--white);border:1px solid var(--line);padding:27px;min-height:227px;display:flex;flex-direction:column;align-items:flex-start;transition:border-color .2s,transform .2s,box-shadow .2s}.service-card:hover{border-color:#80b8b7;transform:translateY(-3px);box-shadow:0 15px 35px #17303912}.service-icon{font-family:Manrope,sans-serif;color:var(--teal-dark);font-size:13px;font-weight:800;letter-spacing:.07em;border-bottom:2px solid var(--teal);padding-bottom:9px}.service-card h3{font:800 20px/1.28 Manrope,sans-serif;letter-spacing:-.025em;margin:24px 0 9px}.service-card p{color:var(--muted);font-size:14px;line-height:1.65;margin:0}.service-card.featured{background:var(--navy2);color:#fff;border-color:var(--navy2)}.service-card.featured p{color:#b9cdd2}.service-card.featured .service-icon{color:var(--teal)}
+    .capabilities{background:#102331;color:#f4fbfa;padding:0}.cap-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:590px}.cap-photo{position:relative;min-height:550px;overflow:hidden}.cap-photo img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}.photo-tag{position:absolute;bottom:18px;left:22px;background:#0c1d29df;color:#d9eeee;font-size:11px;padding:7px 9px;border:1px solid #6b979655}.cap-copy{padding:75px max(30px,calc((100vw - 1240px)/2 + 30px)) 72px 70px;max-width:720px}.cap-copy .section-code{color:var(--teal)}.cap-copy h2{font:800 clamp(30px,3.3vw,45px)/1.14 Manrope,sans-serif;letter-spacing:-.045em;margin:12px 0 19px}.cap-copy>p{color:#b6cdd0;line-height:1.7;font-size:15px;margin:0 0 26px}.machine-list{border-top:1px solid #44606a}.machine-row{display:grid;grid-template-columns:116px 1fr;gap:18px;border-bottom:1px solid #44606a;padding:13px 0;font-size:13px;color:#c5d9dc}.machine-row strong{font-family:Manrope,sans-serif;color:#fff;font-weight:800}.machine-row span{line-height:1.4}
+    .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.process-step{padding:25px 22px 23px;border-right:1px solid var(--line)}.process-step:first-child{padding-left:0}.process-step:last-child{border-right:0}.process-step .num{display:block;color:var(--teal-dark);font:800 14px Manrope,sans-serif;margin-bottom:31px}.process-step h3{font:800 17px/1.3 Manrope,sans-serif;margin:0 0 10px}.process-step p{font-size:14px;line-height:1.65;color:var(--muted);margin:0}
+    .visuals{padding-top:0}.visual-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.visual-grid figure{margin:0;background:#dde8e8}.visual-grid img{width:100%;aspect-ratio:1.46;object-fit:cover}.visual-grid figcaption{display:flex;justify-content:space-between;align-items:center;gap:10px;background:white;padding:15px 18px;color:#203743;font-weight:800;font-size:14px}.visual-grid figcaption small{font-size:11px;font-weight:600;color:var(--muted)}.visual-note{margin:15px 0 0;color:var(--muted);font-size:12px}
+    .contact-band{background:var(--navy);color:white;position:relative;overflow:hidden}.contact-band::after{content:"";position:absolute;width:480px;height:480px;right:-120px;top:-200px;border:1px solid #456170;border-radius:50%;box-shadow:0 0 0 70px #233f4d54,0 0 0 140px #233f4d35;pointer-events:none}.contact-content{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:end}.contact-content .section-code{color:var(--teal)}.contact-content h2{max-width:650px}.contact-content p{color:#bad0d4;font-size:15px;max-width:510px;line-height:1.7;margin:19px 0 0}.contact-info{border-top:1px solid #55717a}.contact-row{display:flex;justify-content:space-between;gap:20px;border-bottom:1px solid #55717a;padding:16px 0;align-items:center}.contact-row span{font-size:11px;letter-spacing:.14em;color:#9cb9bf;text-transform:uppercase}.contact-row a,.contact-row strong{font-size:15px;font-weight:700;text-align:right;color:white;text-decoration:none}.contact-row a:hover{color:var(--teal)}.contact-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.contact-actions .button{font-size:13px}
+    .footer{background:#08121d;color:#8fa6ae;border-top:1px solid #243c49}.footer-inner{min-height:86px;display:flex;align-items:center;justify-content:space-between;gap:15px;font-size:12px}.footer-links{display:flex;gap:19px;flex-wrap:wrap}.footer a{text-decoration:none}.footer a:hover{color:var(--teal)}
+    @media(max-width:1120px){.nav{gap:14px}.header-inner{gap:12px}.languages{gap:0;padding-left:8px}.header-cta{display:none}}
+    @media(max-width:860px){.container{padding:0 22px}.header-inner{min-height:66px}.nav{display:none;position:absolute;top:66px;left:0;right:0;background:#0b1622;padding:18px 22px 24px;border-bottom:1px solid #35505c;flex-direction:column;align-items:stretch;gap:0}.nav.open{display:flex}.nav a{padding:11px 0;font-size:16px}.header-right{margin-left:auto}.menu-toggle{display:grid;place-items:center;background:none;color:#fff;border:1px solid #52717d;border-radius:4px;width:40px;height:38px;font-size:21px;line-height:1}.cap-copy{padding:60px 35px}.hero,.hero-inner{min-height:600px}}
+    @media(max-width:720px){.section{padding:68px 0}.section-head{display:block;margin-bottom:26px}.section-intro{margin-top:13px}.services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cap-grid{grid-template-columns:1fr}.cap-photo{min-height:370px}.cap-copy{padding:52px 22px 58px}.process-grid{grid-template-columns:repeat(2,1fr)}.process-step{border-bottom:1px solid var(--line)}.process-step:nth-child(2){border-right:0}.process-step:nth-child(3),.process-step:nth-child(4){border-bottom:0}.process-step:nth-child(3){padding-left:0}.visual-grid{grid-template-columns:1fr}.contact-content{grid-template-columns:1fr;gap:30px}.contact-band::after{opacity:.35}}
+    @media(max-width:520px){.container{padding:0 17px}.header-inner{gap:7px}.logo-mark{width:30px;height:30px}.logo-name{font-size:14px}.logo-name small{font-size:8px}.languages{display:none}.mobile-language{display:block;margin-left:auto;background:#122a35;border:1px solid #45616d;border-radius:4px;color:white;font-size:12px;padding:8px 4px;width:66px}.header-right{margin-left:0}.hero,.hero-inner{min-height:590px}.hero::after{background:linear-gradient(90deg,rgba(6,17,29,.98),rgba(7,20,32,.83) 65%,rgba(7,20,32,.51)),linear-gradient(0deg,rgba(6,17,29,.7),transparent 40%)}.hero-image{object-position:61% center}.hero-inner{padding-top:35px;padding-bottom:80px}.hero h1{font-size:clamp(38px,10vw,54px);margin:20px 0}.hero .lead{font-size:15px}.hero-actions{gap:9px;margin-top:27px}.button{font-size:13px;padding:11px 15px}.hero-bottom .container{padding-top:13px;padding-bottom:13px;line-height:1.5}.hero-bottom .image-disclaimer{display:none}.section-head h2,.split-copy h2,.contact-content h2{font-size:32px}.services-grid{grid-template-columns:1fr}.service-card{min-height:0;padding:22px}.service-card h3{margin-top:20px}.cap-photo{min-height:265px}.process-grid{grid-template-columns:1fr}.process-step,.process-step:nth-child(3){padding:20px 0;border-right:0;border-bottom:1px solid var(--line)}.process-step:last-child{border-bottom:0}.process-step .num{margin-bottom:12px}.visual-grid img{aspect-ratio:1.35}.contact-row{align-items:start;flex-direction:column;gap:5px}.contact-row a,.contact-row strong{text-align:left}.footer-inner{padding-top:25px;padding-bottom:25px;align-items:start;flex-direction:column}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+  </style>
 </head>
 <body>
-
-<header>
-  <div class="wrap hbar">
-    <a class="logo" href="#top" style="display:flex;align-items:center;gap:9px">
-      <img src="logo-mark.png" alt="" width="26" height="28" style="display:block">
-      <span>INTE<b>CH</b></span>
-    </a>
-    <nav>
-      <a href="#services" data-i="nav_services"></a>
-      <a href="#equipment" data-i="nav_equipment"></a>
-      <a href="#works" data-i="nav_works"></a>
-      <a href="#clients" data-i="nav_clients"></a>
-      <a href="#contact" data-i="nav_contact"></a>
-    </nav>
-    <div class="langs" role="group" aria-label="Language">
-      <button data-lang="uz" class="on">UZ</button>
-      <button data-lang="uz_cy">УЗ</button>
-      <button data-lang="ru">RU</button>
-      <button data-lang="en">EN</button>
+  <a class="skip" href="#main" data-i="skip">Asosiy tarkibga o‘tish</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="logo" aria-label="INTECH Engineering — bosh sahifa"><img class="logo-mark" src="logo-mark.png" alt="" width="36" height="36"><span class="logo-name">INTECH<small>ENGINEERING</small></span></a>
+      <nav class="nav" id="main-nav" aria-label="Asosiy menyu">
+        <a href="#services" data-i="nav_services">Xizmatlar</a><a href="#capabilities" data-i="nav_capabilities">Imkoniyatlar</a><a href="#process" data-i="nav_process">Ish jarayoni</a><a href="#contact" data-i="nav_contact">Aloqa</a>
+      </nav>
+      <div class="header-right"><div class="languages" role="group" aria-label="Til tanlash"><button type="button" data-lang="uz" class="active" aria-pressed="true">UZ</button><button type="button" data-lang="uz_cy" aria-pressed="false">ЎЗ</button><button type="button" data-lang="ru" aria-pressed="false">RU</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div><select class="mobile-language" aria-label="Til tanlash"><option value="uz">UZ</option><option value="uz_cy">ЎЗ</option><option value="ru">RU</option><option value="en">EN</option></select><a class="header-cta" href="#contact" data-i="nav_rfq">So‘rov yuborish</a><button type="button" class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Menyuni ochish">☰</button></div>
     </div>
-  </div>
-</header>
-
-<div class="hero" id="top">
-  <svg class="shamsa" viewBox="-100 -100 200 200" aria-hidden="true">
-    <g fill="none" stroke="#1C2748" stroke-width="0.8">
-      <circle r="14"/><circle r="20"/><circle r="58"/><circle r="72"/><circle r="92"/>
-      <g id="p">
-        <path d="M0 -56 C6 -44 6 -30 0 -22 C-6 -30 -6 -44 0 -56 Z"/>
-        <path d="M0 -72 L5 -60 L0 -56 L-5 -60 Z"/>
-        <circle cx="0" cy="-82" r="2.5"/>
-      </g>
-      <use href="#p" transform="rotate(30)"/><use href="#p" transform="rotate(60)"/>
-      <use href="#p" transform="rotate(90)"/><use href="#p" transform="rotate(120)"/>
-      <use href="#p" transform="rotate(150)"/><use href="#p" transform="rotate(180)"/>
-      <use href="#p" transform="rotate(210)"/><use href="#p" transform="rotate(240)"/>
-      <use href="#p" transform="rotate(270)"/><use href="#p" transform="rotate(300)"/>
-      <use href="#p" transform="rotate(330)"/>
-      <path d="M0 -14 L10 -10 L14 0 L10 10 L0 14 L-10 10 L-14 0 L-10 -10 Z"/>
-    </g>
-  </svg>
-  <div class="wrap">
-    <div class="eyebrow">ANDIJON, UZBEKISTAN · EST. 20+ YRS · ±0.005 mm</div>
-    <h1 data-i="hero_h1"></h1>
-    <p data-i="hero_p"></p>
-    <div class="cta">
-      <a class="btn solid" href="tel:+998902682323" data-i="cta_call"></a>
-      <a class="btn ghost" href="#services" data-i="cta_services"></a>
-    </div>
-    <div class="stats">
-      <div><b>20+</b><span data-i="st_years"></span></div>
-      <div><b>15+</b><span data-i="st_machines"></span></div>
-      <div><b>10+</b><span data-i="st_clients"></span></div>
-      <div><b>6</b><span data-i="st_team"></span></div>
-    </div>
-  </div>
-</div>
-
-<section id="services">
-  <div class="wrap">
-    <div class="dim"><span class="arr l"></span><h2 data-i="s_title"></h2><span class="tol">SEC.01 / ±0.005</span><span class="arr r"></span></div>
-    <div class="cards">
-      <div class="card" data-code="SVC-01"><h3 data-i="sv1_h"></h3><p data-i="sv1_p"></p></div>
-      <div class="card" data-code="SVC-02"><h3 data-i="sv2_h"></h3><p data-i="sv2_p"></p></div>
-      <div class="card" data-code="SVC-03"><h3 data-i="sv3_h"></h3><p data-i="sv3_p"></p></div>
-      <div class="card" data-code="SVC-04"><h3 data-i="sv4_h"></h3><p data-i="sv4_p"></p></div>
-      <div class="card" data-code="SVC-05"><h3 data-i="sv5_h"></h3><p data-i="sv5_p"></p></div>
-      <div class="card" data-code="SVC-06"><h3 data-i="sv6_h"></h3><p data-i="sv6_p"></p></div>
-      <div class="card" data-code="SVC-07"><h3 data-i="sv7_h"></h3><p data-i="sv7_p"></p></div>
-      <div class="card" data-code="SVC-08"><h3 data-i="sv8_h"></h3><p data-i="sv8_p"></p></div>
-      <div class="card" data-code="SVC-09"><h3 data-i="sv9_h"></h3><p data-i="sv9_p"></p></div>
-      <div class="card" data-code="SVC-10"><h3 data-i="sv10_h"></h3><p data-i="sv10_p"></p></div>
-      <div class="card" data-code="SVC-11"><h3 data-i="sv11_h"></h3><p data-i="sv11_p"></p></div>
-      <div class="card" data-code="SVC-12"><h3 data-i="sv12_h"></h3><p data-i="sv12_p"></p></div>
-    </div>
-  </div>
-</section>
-
-<section id="process">
-  <div class="wrap">
-    <div class="dim"><span class="arr l"></span><h2 data-i="p_title"></h2><span class="tol">SEC.02 / PROC</span><span class="arr r"></span></div>
-    <div class="steps">
-      <div class="step"><span class="n">01</span><h3 data-i="pr1_h"></h3><p data-i="pr1_p"></p></div>
-      <div class="step"><span class="n">02</span><h3 data-i="pr2_h"></h3><p data-i="pr2_p"></p></div>
-      <div class="step"><span class="n">03</span><h3 data-i="pr3_h"></h3><p data-i="pr3_p"></p></div>
-      <div class="step"><span class="n">04</span><h3 data-i="pr4_h"></h3><p data-i="pr4_p"></p></div>
-    </div>
-  </div>
-</section>
-
-<section id="equipment">
-  <div class="wrap">
-    <div class="dim"><span class="arr l"></span><h2 data-i="e_title"></h2><span class="tol">SEC.03 / SPEC</span><span class="arr r"></span></div>
-    <div class="tblwrap">
-    <table class="spec">
-      <thead><tr><th data-i="e_c1"></th><th data-i="e_c2"></th><th data-i="e_c3"></th></tr></thead>
-      <tbody>
-        <tr><td>VMC 850</td><td data-i="eq1"></td><td>Mitsubishi M80 · 4-axis</td></tr>
-        <tr><td>HCL300</td><td data-i="eq2"></td><td>GSK 928TA2</td></tr>
-        <tr><td>DK7745L</td><td data-i="eq3"></td><td>Wire EDM</td></tr>
-        <tr><td>CNC540</td><td data-i="eq4"></td><td>Sinker EDM</td></tr>
-        <tr><td>DD703.30</td><td data-i="eq5"></td><td>EDM Drilling</td></tr>
-        <tr><td>KGS-250AH</td><td data-i="eq6"></td><td>Kent, surface grinding</td></tr>
-        <tr><td>NOVAPAX SW V01</td><td data-i="eq7"></td><td>3-in-1 precision welding</td></tr>
-        <tr><td>Ø6–51 mm</td><td data-i="eq8"></td><td data-i="eq8b"></td></tr>
-        <tr><td>CK6140A</td><td data-i="eq9"></td><td>Loongwei · High-speed turning</td></tr>
-        <tr><td>GD255</td><td data-i="eq10"></td><td>SHINEEAST · Pressure testing</td></tr>
-      </tbody>
-    </table>
-    </div>
-  </div>
-</section>
-
-<section id="works">
-  <div class="wrap">
-    <div class="dim"><span class="arr l"></span><h2 data-i="w_title"></h2><span class="tol">SEC.04 / VIEW A-A</span><span class="arr r"></span></div>
-    <div class="gal">
-      <div class="ph"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M3 17l5-5 4 4 3-3 6 6"/></svg><span data-i="w_ph"></span></div>
-      <div class="ph"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M3 17l5-5 4 4 3-3 6 6"/></svg><span data-i="w_ph"></span></div>
-      <div class="ph"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M3 17l5-5 4 4 3-3 6 6"/></svg><span data-i="w_ph"></span></div>
-      <div class="ph"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M3 17l5-5 4 4 3-3 6 6"/></svg><span data-i="w_ph"></span></div>
-    </div>
-  </div>
-</section>
-
-<section id="clients">
-  <div class="wrap">
-    <div class="dim"><span class="arr l"></span><h2 data-i="c_title"></h2><span class="tol">SEC.05 / REF</span><span class="arr r"></span></div>
-    <p data-i="c_p" style="color:var(--steel);max-width:640px;margin-bottom:22px"></p>
-    <div class="clients">
-      <span>UZ KORAM</span><span>UZ SAEMYUNG</span><span>UZ DONG YANG</span>
-      <span>UZ CLIMATE CONTROL</span><span>UZ ERAE ALTERNATOR</span>
-      <span>OLTINKO'L PLAST</span><span>UZ METR TECH</span><span>UZ CHASSIS</span>
-    </div>
-  </div>
-</section>
-
-<section id="faq">
-  <div class="wrap">
-    <div class="dim"><span class="arr l"></span><h2 data-i="f_title"></h2><span class="tol">SEC.06 / Q&amp;A</span><span class="arr r"></span></div>
-    <details class="faq"><summary data-i="fq1"></summary><div data-i="fa1"></div></details>
-    <details class="faq"><summary data-i="fq2"></summary><div data-i="fa2"></div></details>
-    <details class="faq"><summary data-i="fq3"></summary><div data-i="fa3"></div></details>
-    <details class="faq"><summary data-i="fq4"></summary><div data-i="fa4"></div></details>
-    <details class="faq"><summary data-i="fq5"></summary><div data-i="fa5"></div></details>
-    <details class="faq"><summary data-i="fq6"></summary><div data-i="fa6"></div></details>
-    <details class="faq"><summary data-i="fq7"></summary><div data-i="fa7"></div></details>
-    <details class="faq"><summary data-i="fq8"></summary><div data-i="fa8"></div></details>
-  </div>
-</section>
-
-<section id="contact" style="border-bottom:0">
-  <div class="wrap">
-    <div class="dim"><span class="arr l"></span><h2 data-i="k_title"></h2><span class="tol">SEC.07 / RFQ</span><span class="arr r"></span></div>
-    <div class="contact">
-      <div>
-        <div class="crow"><span class="k" data-i="k_phone"></span><a href="tel:+998902682323">+998 90 268 23 23</a></div>
-        <div class="crow"><span class="k">EMAIL</span><a href="mailto:2682323@gmail.com">2682323@gmail.com</a></div>
-        <div class="crow"><span class="k" data-i="k_addr"></span><span data-i="k_addr_v"></span></div>
-        <div class="crow"><span class="k" data-i="k_hours"></span><span data-i="k_hours_v"></span></div>
-        <div class="crow"><span class="k">SOCIAL</span><a href="https://www.instagram.com/intech.cnc" rel="noopener">Instagram: @intech.cnc</a></div>
-        <p style="margin-top:26px;color:var(--steel);font-size:.9rem" data-i="k_note"></p>
-      </div>
-      <div class="mapbox">
-        <iframe title="Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps?q=Industrial+ko'chasi+1/22,+Andijon,+Uzbekistan&output=embed"></iframe>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="orn" role="presentation"></div>
-<footer class="wrap">
-  <span>© <span id="yr"></span> INTECH TA'MINOT MCHJ · Andijon, Uzbekistan</span>
-  <span>DWG NO. INTECH-WEB-001 · REV A</span>
-</footer>
-
-<script>
-const I18N = {
-uz:{
- nav_services:"Xizmatlar",nav_equipment:"Jihozlar",nav_works:"Ishlar",nav_clients:"Mijozlar",nav_contact:"Aloqa",
- hero_h1:"Press-formalar ta'miri va aniq CNC ishlov berish",
- hero_p:"INTECH Engineering — Andijondagi aniq mexanik ishlov ustaxonasi. Avtokomponent zavodlari uchun press-forma va shtamplarni tez, aniq va kafolat bilan ta'mirlaymiz hamda ishlab chiqaramiz.",
- cta_call:"Qo'ng'iroq qilish",cta_services:"Xizmatlar",
- st_years:"yillik tajriba",st_machines:"stanok",st_clients:"yirik mijoz",st_team:"mutaxassis",
- s_title:"Xizmatlar",
- sv1_h:"Press-forma ta'miri",sv1_p:"Plastmassa quyish press-formalarini diagnostika va to'liq ta'mirlash, ishlab chiqarishni to'xtatmasdan tez muddatda.",
- sv2_h:"Shtamp va forma detallari",sv2_p:"Press-forma va shtamp detallarini chizma yoki namuna asosida tayyorlash.",
- sv3_h:"CNC tokarlik ishlovi",sv3_p:"Yuqori aniqlikdagi tokarlik ishlovi, rezba va murakkab profillar.",
- sv4_h:"CNC frezerlik (4 o'q)",sv4_p:"Murakkab geometriyali detallarga 4 o'qli frezerlik ishlov berish.",
- sv5_h:"Elektroeroziya (EDM)",sv5_p:"Wire EDM, sinker EDM va EDM burg'ulash — qattiq materiallarda aniq kontur va teshiklar.",
- sv6_h:"Silliqlash",sv6_p:"Yassi yuzalarni mikron aniqlikda silliqlash.",
- sv7_h:"Gidravlik shlanglar (RVD)",sv7_p:"6–51 mm gidravlik shlanglarni yig'ish, presslash va bosim ostida sinovdan o'tkazish.",
- sv8_h:"Injection mashinalar ta'miri",sv8_p:"HAITIAN, LS KOREA, POWERJET — har qanday TPA brendlari uchun ta'mir va qayta tiklash. Holatga qarab 1 kundan",
- sv9_h:"Thermal ishlov (toblash/yumshatish)",sv9_p:"HRC 70 gacha hardening, 1 kunlik tempering, annealing. Furnace harorati — 1250°C.",
- sv10_h:"Custom CAD & G-kod",sv10_p:"AutoCAD, NX — har qanday 3D chizmalar, G-kod, simulyatsiya. 1–2 kunlik leadtime.",
- sv11_h:"Seriyali ishlab chiqarish",sv11_p:"1 dona yoki 10,000 dona — son va sifat chegarasi yo'q. Buyurtma asosida.",
- sv12_h:"Spare parts savdosi",sv12_p:"Injection mashinalar uchun barcha ehtiyot qismlar: screw, barrel, nozzle, valve, heater, motor.",
- e_title:"Jihozlar",e_c1:"Model",e_c2:"Vazifasi",e_c3:"Izoh",
- eq1:"Vertikal frezer markazi",eq2:"CNC tokarlik stanogi",eq3:"Sim bilan elektroeroziya kesish",eq4:"Elektroeroziya o'yish",eq5:"Elektroeroziya burg'ulash",eq6:"Yassi silliqlash",eq7:"Aniq payvandlash (lazer naplavka)",eq8:"Gidravlik shlang presslash",eq8b:"Bosim sinovi bilan",eq9:"Loongwei CNC tokarlik markazi",eq10:"SHINEEAST air-driven bosim tester",
- w_title:"Bajarilgan ishlar",w_ph:"FOTO — tez orada",
- c_title:"Mijozlar",c_p:"O'zbekistondagi yirik avtokomponent ishlab chiqaruvchilariga xizmat ko'rsatamiz:",
- k_title:"Aloqa",k_phone:"TELEFON",k_addr:"MANZIL",k_addr_v:"Industrial ko'chasi 1/22, Andijon (Irmash zavodi yonida)",
- k_hours:"ISH VAQTI",k_hours_v:"Du–Sha 08:30–19:00",
- k_note:"Chizma yoki namuna yuboring — bir ish kuni ichida narx va muddatni aytamiz.",
- p_title:"Ish jarayoni",
- pr1_h:"So'rov",pr1_p:"Chizma, foto yoki namunani telefon, Telegram yoki email orqali yuborasiz.",
- pr2_h:"Narx va muddat",pr2_p:"Diagnostika asosida bir ish kuni ichida aniq narx va muddatni taqdim etamiz.",
- pr3_h:"Ishlov / ta'mir",pr3_p:"CNC, EDM, silliqlash va lazer naplavka orqali ishlov beramiz.",
- pr4_h:"Sinov va topshirish",pr4_p:"O'lchovlar tekshirilib, ish kafolat bilan topshiriladi.",
- f_title:"Ko'p so'raladigan savollar",
- fq1:"Press-forma ta'miri qancha vaqt oladi?",fa1:"Nosozlik darajasiga qarab 1 kundan 10 kungacha. Diagnostikadan so'ng aniq muddatni aytamiz; zavod to'xtab qolgan shoshilinch holatlar birinchi navbatda bajariladi.",
- fq2:"Qanday materiallar bilan ishlaysizlar?",fa2:"Instrumental va toblangan po'latlar (EDM orqali HRC 60 gacha), alyuminiy va mis qotishmalari. Yeyilgan yuzalarni lazer naplavka bilan tiklaymiz.",
- fq3:"Narx qanday aniqlanadi?",fa3:"Chizma yoki foto yuborasiz — bir ish kuni ichida narx va muddat aytamiz. Detalni ko'rik uchun ustaxonaga olib kelishingiz ham mumkin.",
- fq4:"Qaysi hududlarga xizmat ko'rsatasizlar?",fa4:"Butun O'zbekiston va Qirg'iziston. Andijonda joylashganmiz — Farg'ona vodiysidagi zavodlar uchun ayniqsa qulay: bir kun ichida yetib boramiz.",
- fq5:"Yangi press-forma detallari ham yasaysizlarmi?",fa5:"Ha — press-forma va shtamp detallarini chizma yoki namuna asosida ishlab chiqaramiz.",
- fq6:"Injection mashinalar ta'mirlaysizlarmi?",fa6:"Ha — HAITIAN, LS KOREA, POWERJET kabi har qanday TPA brendlarini ta'mirlaydi, diagnostika qilamiz va tiklashni bajaramiz. Vaqti xalqotga qarab.",
- fq7:"Custom chizmalar va G-kod yozasizlarmi?",fa7:"Ha — AutoCAD va NX'da 3D chizmalar tayyorlaymiz, G-kod yozamiz va simulyatsiya qilamiz. 1–2 kunlik muddat.",
- fq8:"Thermal treatment (hardening, annealing) qilasizlarmi?",fa8:"Ha — HRC 70 gacha hardening, 24 soatlik tempering, annealing. Furnach harorati 1250°C.",
-},
-uz_cy:{
- nav_services:"Хизматлар",nav_equipment:"Жиҳозлар",nav_works:"Ишлар",nav_clients:"Мижозлар",nav_contact:"Алоқа",
- hero_h1:"Пресс-формалар та'мири ва аниқ ЧПУ ишлови бериш",
- hero_p:"INTECH Engineering — Андижондаги аниқ механик ишлов устахонаси. Автокомпонент заводлари учун пресс-форма ва штамплларни тез, аниқ ва кафолат билан та'мирлаймиз ҳамда ишлаб чиқарамiz.",
- cta_call:"Қўнғироқ қилиш",cta_services:"Хизматлар",
- st_years:"йиллик тажриба",st_machines:"станок",st_clients:"йирик мижоз",st_team:"мутахассис",
- s_title:"Хизматлар",
- sv1_h:"Пресс-форма та'мири",sv1_p:"Пластмасса қуйиш пресс-формаларини диагностика ва тўлиқ та'миршаш, ишлаб чиқаришни тўхтатмасдан тез муддатда.",
- sv2_h:"Штамп ва форма деталлари",sv2_p:"Пресс-форма ва штамп деталларини чизма ёки намуна асосида тайёрлаш.",
- sv3_h:"ЧПУ токарлик ишлови",sv3_p:"Юқори аниқликдаги токарлик ишлови, резба ва мураккаб профиллар.",
- sv4_h:"ЧПУ фрезерлик (4 ўқ)",sv4_p:"Мураккаб геометрияли деталлага 4 ўқли фрезерлик ишлов бериш.",
- sv5_h:"Электроэрозия (EDM)",sv5_p:"Wire EDM, sinker EDM ва EDM бўрғуланш — қатт материаллорда аниқ контур ва тешиклар.",
- sv6_h:"Силлиқлаш",sv6_p:"Ясси юзаларни микрон аниқликда силлиқлаш.",
- sv7_h:"Гидравлик шлангллар (РВД)",sv7_p:"6–51 mm гидравлик шлангларни йиғиш, прессланш ва босим остида синовдан ўтказиш.",
- sv8_h:"Injection машиналар та'мири",sv8_p:"HAITIAN, LS KOREA, POWERJET — ҳар қандай TPA брендлари учун та'мир ва қайта тиклаш. Ҳолатга қараб 1 кундан",
- sv9_h:"Thermal ишлов (тобланш/юмшатиш)",sv9_p:"HRC 70 гача hardening, 1 кунлик tempering, annealing. Furnace ҳаротаи — 1250°C.",
- sv10_h:"Custom CAD & G-код",sv10_p:"AutoCAD, NX — ҳар қандай 3D чизмалар, G-код, симулятсия. 1–2 кунлик leadtime.",
- sv11_h:"Серияли ишлаб чиқариш",sv11_p:"1 дона ёки 10,000 дона — сон ва сифат чегараси йўқ. Буюртма асосида.",
- sv12_h:"Spare parts савдоси",sv12_p:"ТПА ускуналари учун барча эҳтиёт қисмлар: screw, barrel, nozzle, valve, heater, motor.",
- e_title:"Жиҳозлар",e_c1:"Модель",e_c2:"Вазифаси",e_c3:"Изоҳ",
- eq1:"Вертикал фрезер маркази",eq2:"ЧПУ токарлик станоги",eq3:"Сим билан электроэрозия кесиш",eq4:"Электроэрозия ўйиш",eq5:"Электроэрозия бўрғуланш",eq6:"Ясси силлиқлаш",eq7:"Аниқ пайванданш (лазер напловка)",eq8:"Гидравлик шланг прессланш",eq8b:"Босим синови билан",eq9:"Loongwei ЧПУ токарлик маркази",eq10:"SHINEEAST air-driven босим тестер",
- w_title:"Бажарилган ишлар",w_ph:"ФОТО — тез орада",
- c_title:"Мижозлар",c_p:"Ўзбекистондаги йирик автокомпонент ишлаб чиқарувчиларига хизмат кўрсатамиз:",
- k_title:"Алоқа",k_phone:"ТЕЛЕФОН",k_addr:"МАНЗИЛ",k_addr_v:"Industrial кўчаси 1/22, Андижон (Ирмаш заводи ёнида)",
- k_hours:"ИШ ВАҚТИ",k_hours_v:"Ду–Ша 08:30–19:00",
- k_note:"Чизма ёки намуна юборинг — бир иш кунида нарх ва муддатни айтамиз.",
- p_title:"Иш жараёни",
- pr1_h:"Сўров",pr1_p:"Чизма, фото ёки намунани телефон, Telegram ёки email орқали юбораси.",
- pr2_h:"Нарх ва мудdat",pr2_p:"Диагностика асосида бир иш кунида аниқ нарх ва муддатни таклиф этамиз.",
- pr3_h:"Ишлов / та'мир",pr3_p:"ЧПУ, EDM, силлиқлаш ва лазер напловка орқали ишлов бераимз.",
- pr4_h:"Синов ва топшириш",pr4_p:"Ўлчовллар текширилиб, иш кафолат билан топширилади.",
- f_title:"Кўп сўраладиган саволлар",
- fq1:"Пресс-форма та'мири қанча вақт олади?",fa1:"Носозлик даражасига қараб 1 кундан 10 кунгача. Диагностикадан сўнг аниқ муддатни айтамиз; завод тўхтаб қолган шошилинч ҳолатлар биринчи навбатда бажарилади.",
- fq2:"Қандай материаллар билан ишлайсизлар?",fa2:"Инструментал ва тобланган пўлатллар (EDM орқали HRC 60 гача), алюминий ва мис қотишмалари. Йейилган юзаларни лазер напловка билан тиклаимз.",
- fq3:"Нарх қандай аниқланади?",fa3:"Чизма ёки фото юборасиз — бир иш кунида нарх ва мудат айтамиз. Деталини кўрик учун устахонага олиб келишингиз ҳам мумкин.",
- fq4:"Қайси ҳудудларга хизмат кўрсаттасизлар?",fa4:"Бутун Ўзбекистон ва Қирғизистон. Андижонда жойлашганмиз — Фарғона водийсидаги заводлар учун айнича қуллай: бир кун ичида йетиб боримз.",
- fq5:"Янги пресс-форма деталлари ҳам йасайсизларми?",fa5:"Ҳа — пресс-форма ва штамп деталларини чизма ёки намуна асосида ишлаб чиқараимз.",
- fq6:"Injection машиналар та'мирлайсизларми?",fa6:"Ҳа — HAITIAN, LS KOREA, POWERJET каби ҳар қандай TPA брендларини та'миршайди, диагностика қилами ва тиклашни бажараmiz. Вақти халқотга қараб.",
- fq7:"Custom чизмалар ва G-код йозасизларми?",fa7:"Ҳа — AutoCAD ва NX'да 3D чизмалар тайёрлаймиз, G-код йозамиз ва симулятсия қилами. 1–2 кунлик мудат.",
- fq8:"Thermal treatment (hardening, annealing) қиласизларми?",fa8:"Ҳа — HRC 70 гача hardening, 24 соатлик tempering, annealing. Furnach ҳаротаи 1250°C.",
-},
-ru:{
- nav_services:"Услуги",nav_equipment:"Оборудование",nav_works:"Работы",nav_clients:"Клиенты",nav_contact:"Контакты",
- hero_h1:"Ремонт пресс-форм и прецизионная обработка ЧПУ",
- hero_p:"INTECH Engineering — прецизионный инструментальный цех в Андижане. Ремонтируем и изготавливаем пресс-формы и штампы для заводов автокомпонентов: быстро, точно, с гарантией.",
- cta_call:"Позвонить",cta_services:"Услуги",
- st_years:"лет опыта",st_machines:"станков",st_clients:"крупных клиентов",st_team:"специалистов",
- s_title:"Услуги",
- sv1_h:"Ремонт пресс-форм",sv1_p:"Диагностика и полный ремонт литьевых пресс-форм в короткие сроки, без длительной остановки производства.",
- sv2_h:"Штампы и детали форм",sv2_p:"Изготовление деталей пресс-форм и штампов по чертежу или образцу.",
- sv3_h:"Токарная обработка ЧПУ",sv3_p:"Высокоточная токарная обработка, резьбы и сложные профили.",
- sv4_h:"Фрезерная обработка (4 оси)",sv4_p:"4-осевая фрезерная обработка деталей сложной геометрии.",
- sv5_h:"Электроэрозия (EDM)",sv5_p:"Wire EDM, прошивной EDM и EDM-сверление — точные контуры и отверстия в закалённых материалах.",
- sv6_h:"Шлифовка",sv6_p:"Плоская шлифовка с микронной точностью.",
- sv7_h:"Гидравлические рукава (РВД)",sv7_p:"Сборка, опрессовка и испытание давлением рукавов 6–51 мм.",
- sv8_h:"Ремонт машин впрыска (TPA)",sv8_p:"HAITIAN, LS KOREA, POWERJET — любые бренды литьевых машин. Диагностика, ремонт и восстановление. Сроки в зависимости от неисправности.",
- sv9_h:"Термообработка",sv9_p:"Закалка до HRC 70, отпуск 24 часа, отжиг. Печь до 1250°C.",
- sv10_h:"Проектирование CAD & G-код",sv10_p:"AutoCAD, NX — любые 3D чертежи, G-код, симуляция. Готово за 1–2 дня.",
- sv11_h:"Серийное производство",sv11_p:"1 деталь или 10 000 — без ограничений по количеству и качеству. По заказу.",
- sv12_h:"Поставка запчастей",sv12_p:"Все запасные части для литьевых машин: screw, barrel, nozzle, check valve, heater band, motor.",
- e_title:"Оборудование",e_c1:"Модель",e_c2:"Назначение",e_c3:"Примечание",
- eq1:"Вертикальный фрезерный центр",eq2:"Токарный станок ЧПУ",eq3:"Электроэрозионная резка проволокой",eq4:"Прошивная электроэрозия",eq5:"Электроэрозионное сверление",eq6:"Плоская шлифовка",eq7:"Прецизионная сварка (лазерная наплавка)",eq8:"Опрессовка РВД",eq8b:"С испытанием давлением",eq9:"Токарный центр Loongwei ЧПУ",eq10:"Пневматический тестер давления SHINEEAST",
- w_title:"Выполненные работы",w_ph:"ФОТО — скоро",
- c_title:"Клиенты",c_p:"Обслуживаем крупных производителей автокомпонентов Узбекистана:",
- k_title:"Контакты",k_phone:"ТЕЛЕФОН",k_addr:"АДРЕС",k_addr_v:"ул. Индустриальная 1/22, Андижан (рядом с заводом «Ирмаш»)",
- k_hours:"ЧАСЫ",k_hours_v:"Пн–Сб 08:30–19:00",
- k_note:"Отправьте чертёж или образец — в течение одного рабочего дня сообщим цену и сроки.",
- p_title:"Как мы работаем",
- pr1_h:"Заявка",pr1_p:"Отправьте чертёж, фото или образец по телефону, в Telegram или на email.",
- pr2_h:"Цена и сроки",pr2_p:"После диагностики в течение одного рабочего дня сообщаем точную цену и сроки.",
- pr3_h:"Обработка / ремонт",pr3_p:"Выполняем работы на ЧПУ, EDM, шлифовке и лазерной наплавке.",
- pr4_h:"Контроль и сдача",pr4_p:"Проверяем размеры и сдаём работу с гарантией.",
- f_title:"Частые вопросы",
- fq1:"Сколько занимает ремонт пресс-формы?",fa1:"От 1 до 10 дней в зависимости от неисправности. Точный срок сообщаем после диагностики; срочные случаи с остановкой производства выполняем в первую очередь.",
- fq2:"С какими материалами работаете?",fa2:"Инструментальные и закалённые стали (до HRC 60 через EDM), алюминиевые и медные сплавы. Изношенные поверхности восстанавливаем лазерной наплавкой.",
- fq3:"Как определяется цена?",fa3:"Отправьте чертёж или фото — в течение одного рабочего дня сообщим цену и сроки. Можно также привезти деталь на осмотр в цех.",
- fq4:"В какие регионы работаете?",fa4:"Весь Узбекистан и Кыргызстан. Мы находимся в Андижане — особенно удобно для заводов Ферганской долины: приезжаем в течение дня.",
- fq5:"Изготавливаете ли новые детали пресс-форм?",fa5:"Да — изготавливаем детали пресс-форм и штампов по чертежу или образцу.",
- fq6:"Ремонтируете ли машины впрыска?",fa6:"Да — ремонтируем HAITIAN, LS KOREA, POWERJET и другие бренды TPA: диагностика, ремонт, восстановление. Сроки в зависимости от неисправности.",
- fq7:"Проектируете ли чертежи CAD и G-код?",fa7:"Да — создаём чертежи в AutoCAD и NX, пишем G-код, выполняем симуляцию. Готово за 1–2 дня.",
- fq8:"Выполняете ли термообработку?",fa8:"Да — закалка до HRC 70, отпуск 24 часа, отжиг. Печь до 1250°C.",
-},
-en:{
- nav_services:"Services",nav_equipment:"Equipment",nav_works:"Works",nav_clients:"Clients",nav_contact:"Contact",
- hero_h1:"Mold repair & precision CNC machining",
- hero_p:"INTECH Engineering is a precision toolshop in Andijon, Uzbekistan. We repair and manufacture injection molds and dies for automotive component plants — fast, accurate, guaranteed.",
- cta_call:"Call us",cta_services:"Services",
- st_years:"years of experience",st_machines:"machines",st_clients:"major clients",st_team:"specialists",
- s_title:"Services",
- sv1_h:"Injection mold repair",sv1_p:"Diagnostics and full repair of injection molds with fast turnaround to minimize production downtime.",
- sv2_h:"Dies & mold components",sv2_p:"Manufacturing of mold and die components from drawings or samples.",
- sv3_h:"CNC turning",sv3_p:"High-precision turning, threads and complex profiles.",
- sv4_h:"CNC milling (4-axis)",sv4_p:"4-axis milling of complex-geometry parts.",
- sv5_h:"EDM machining",sv5_p:"Wire EDM, sinker EDM and EDM drilling — precise contours and holes in hardened materials.",
- sv6_h:"Surface grinding",sv6_p:"Flat surface grinding with micron-level accuracy.",
- sv7_h:"Hydraulic hoses",sv7_p:"Assembly, crimping and pressure testing of hydraulic hoses Ø6–51 mm.",
- sv8_h:"Injection molding machine repair",sv8_p:"HAITIAN, LS KOREA, POWERJET — any TPA brand. Diagnostics, repair and restoration. Lead time depends on defect.",
- sv9_h:"Thermal treatment",sv9_p:"Hardening to HRC 70, tempering 24 hours, annealing. Furnace up to 1250°C.",
- sv10_h:"CAD design & G-code",sv10_p:"AutoCAD, NX — any 3D drawings, G-code, simulation. Ready in 1–2 days.",
- sv11_h:"Serial production",sv11_p:"1 unit or 10,000 — no limits on quantity or quality. Made to order.",
- sv12_h:"Spare parts supply",sv12_p:"All spare parts for injection molding machines: screw, barrel, nozzle, check valve, heater band, motor.",
- e_title:"Equipment",e_c1:"Model",e_c2:"Purpose",e_c3:"Notes",
- eq1:"Vertical machining center",eq2:"CNC lathe",eq3:"Wire EDM cutting",eq4:"Sinker EDM",eq5:"EDM drilling",eq6:"Surface grinding",eq7:"Precision welding (laser cladding)",eq8:"Hydraulic hose crimping",eq8b:"With pressure testing",eq9:"Loongwei CNC turning center",eq10:"SHINEEAST air-driven pressure tester",
- w_title:"Our works",w_ph:"PHOTO — coming soon",
- c_title:"Clients",c_p:"We serve major automotive component manufacturers in Uzbekistan:",
- k_title:"Contact",k_phone:"PHONE",k_addr:"ADDRESS",k_addr_v:"Industrial street 1/22, Andijon (near Irmash plant)",
- k_hours:"HOURS",k_hours_v:"Mon–Sat 08:30–19:00",
- k_note:"Send us a drawing or a sample — we will quote price and lead time within one business day.",
- p_title:"How we work",
- pr1_h:"Inquiry",pr1_p:"Send a drawing, photo or sample by phone, Telegram or email.",
- pr2_h:"Quote",pr2_p:"After diagnostics we quote exact price and lead time within one business day.",
- pr3_h:"Machining / repair",pr3_p:"We machine on CNC, EDM, grinding and laser cladding equipment.",
- pr4_h:"Inspection & delivery",pr4_p:"Dimensions are verified and work is delivered with a warranty.",
- f_title:"FAQ",
- fq1:"How long does mold repair take?",fa1:"From 1 to 10 days depending on the defect. We confirm the exact lead time after diagnostics; urgent production-stop cases are handled first.",
- fq2:"What materials do you work with?",fa2:"Tool and hardened steels (up to HRC 60 via EDM), aluminum and copper alloys. Worn surfaces are restored by laser cladding.",
- fq3:"How is the price determined?",fa3:"Send a drawing or photo — we quote price and lead time within one business day. You can also bring the part to our shop for inspection.",
- fq4:"Which regions do you serve?",fa4:"All of Uzbekistan and Kyrgyzstan. Based in Andijon — especially convenient for Fergana Valley plants: we can arrive within a day.",
- fq5:"Do you manufacture new mold components?",fa5:"Yes — we manufacture mold and die components from drawings or samples.",
- fq6:"Do you repair injection molding machines?",fa6:"Yes — we repair HAITIAN, LS KOREA, POWERJET and other TPA brands: diagnostics, repair, restoration. Lead time depends on the defect.",
- fq7:"Do you design CAD drawings and write G-code?",fa7:"Yes — we create drawings in AutoCAD and NX, write G-code and perform simulation. Ready in 1–2 days.",
- fq8:"Do you provide thermal treatment?",fa8:"Yes — hardening to HRC 70, tempering 24 hours, annealing. Furnace up to 1250°C.",
-}
-};
-let lang = "uz";
-function apply(){
-  const d = I18N[lang];
-  document.documentElement.lang = lang;
-  document.querySelectorAll("[data-i]").forEach(el=>{ const k=el.getAttribute("data-i"); if(d[k]!==undefined) el.textContent=d[k]; });
-  document.querySelectorAll(".langs button").forEach(b=>b.classList.toggle("on",b.dataset.lang===lang));
-}
-document.querySelectorAll(".langs button").forEach(b=>b.addEventListener("click",()=>{lang=b.dataset.lang;apply();}));
-document.getElementById("yr").textContent = new Date().getFullYear();
-apply();
-</script>
+  </header>
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <img class="hero-image" src="assets/mold-cnc-illustration.webp" alt="CNC markazida ishlov berilayotgan metall qolipning illyustrativ tasviri" fetchpriority="high" width="1672" height="941">
+      <div class="container hero-inner"><div class="eyebrow" data-i="hero_eyebrow">ANDIJON · QOLIP VA ANIQ ISHLOV</div><h1 id="hero-title" data-i-html="hero_title">Qolip ta’miri.<br><em>Aniqlik bilan ishlab chiqarish.</em></h1><p class="lead" data-i="hero_lead">Plastmassa qoliplari va shtamp detallarini ta’mirlash, tayyorlash hamda CNC va EDM orqali ishlov berish bo‘yicha muhandislik xizmati.</p><div class="hero-actions"><a class="button button-primary" href="#contact"><span data-i="hero_cta">Texnik so‘rov yuborish</span><span class="arrow" aria-hidden="true">↗</span></a><a class="button button-outline" href="#services" data-i="hero_more">Xizmatlarni ko‘rish</a></div></div>
+      <div class="hero-bottom"><div class="container"><span><strong data-i="hero_experience">20+ yil</strong> <span data-i="hero_legacy">ustaxona tajribasi · Andijon, O‘zbekiston</span></span><span class="image-disclaimer" data-i="illustrative">Illyustrativ tasvir</span></div></div>
+    </section>
+    <section class="section" id="services" aria-labelledby="services-title"><div class="container"><div class="section-head"><div><div class="section-code">01 / SERVICES</div><h2 id="services-title" data-i="services_title">Qoliplar uchun to‘liq ishlov zanjiri</h2></div><p class="section-intro" data-i="services_intro">Nosozlikni aniqlashdan detalni tiklash yoki yangisini tayyorlashgacha kerakli jarayonlarni bir joyda birlashtiramiz.</p></div><div class="services-grid">
+      <article class="service-card featured"><span class="service-icon">01 / MOLD</span><h3 data-i="service1_title">Qolip ta’miri</h3><p data-i="service1_body">Plastmassa qoliplarini diagnostika qilish, yeyilgan joylarni tiklash, sovitish kanallari va ejektor tizimini ko‘rib chiqish.</p></article>
+      <article class="service-card"><span class="service-icon">02 / CNC</span><h3 data-i="service2_title">CNC frezalash va tokarlik</h3><p data-i="service2_body">Chizma yoki namuna asosida qolip, shtamp va boshqa aniq mexanik detallarni tayyorlash.</p></article>
+      <article class="service-card"><span class="service-icon">03 / EDM</span><h3 data-i="service3_title">Elektroeroziya ishlovi</h3><p data-i="service3_body">Wire cut, die sinking va EDM drilling yordamida murakkab kontur, kovak va mayda teshiklar hosil qilish.</p></article>
+      <article class="service-card"><span class="service-icon">04 / FINISH</span><h3 data-i="service4_title">Polishing va silliqlash</h3><p data-i="service4_body">Qolip yuzasini polishing qilish va yassi silliqlash orqali yakuniy ishlov berish.</p></article>
+      <article class="service-card"><span class="service-icon">05 / REPAIR</span><h3 data-i="service5_title">Aniq payvandlash</h3><p data-i="service5_body">Qolipning zararlangan yoki yeyilgan qismlarini precision welding orqali tiklash.</p></article>
+      <article class="service-card"><span class="service-icon">06 / COMPONENTS</span><h3 data-i="service6_title">Qolip va shtamp detallari</h3><p data-i="service6_body">Insert, puanson, ejektor va boshqa komponentlarni loyiha talablariga muvofiq tayyorlash.</p></article>
+    </div></div></section>
+    <section class="capabilities" id="capabilities" aria-labelledby="cap-title"><div class="cap-grid"><div class="cap-photo"><img src="assets/wire-edm-illustration.webp" alt="Wire EDM yordamida metall detalga ishlov berishning illyustrativ tasviri" loading="lazy" width="1536" height="1024"><span class="photo-tag" data-i="illustrative">Illyustrativ tasvir</span></div><div class="cap-copy"><div class="section-code">02 / CAPABILITIES</div><h2 id="cap-title" data-i="cap_title">Bir detal. Bir nechta texnologiya.</h2><p data-i="cap_intro">Jarayonni detal geometriyasi, material va talab etilgan aniqlikka qarab tanlaymiz. Narx hamda ishlab chiqarish muddati texnik ma’lumotlar ko‘rib chiqilgach kelishiladi.</p><div class="machine-list"><div class="machine-row"><strong>VMC 850</strong><span data-i="machine1">4 o‘qli CNC frezalash · Mitsubishi M80</span></div><div class="machine-row"><strong>DK7745L</strong><span data-i="machine2">Wire EDM kesish</span></div><div class="machine-row"><strong>CNC540</strong><span data-i="machine3">Die sinking EDM</span></div><div class="machine-row"><strong>DD703.40</strong><span data-i="machine4">EDM drilling</span></div><div class="machine-row"><strong>KGS 250AH</strong><span data-i="machine5">Yassi silliqlash</span></div><div class="machine-row"><strong>NOVAPAX</strong><span data-i="machine6">Precision welding · SW-V01</span></div></div></div></div></section>
+    <section class="section" id="process" aria-labelledby="process-title"><div class="container"><div class="section-head"><div><div class="section-code">03 / PROCESS</div><h2 id="process-title" data-i="process_title">So‘rovdan tayyor detalga</h2></div><p class="section-intro" data-i="process_intro">Har bir buyurtma chizma, material va texnik talablar asosida alohida baholanadi.</p></div><div class="process-grid"><div class="process-step"><span class="num">01</span><h3 data-i="step1_title">Texnik so‘rov</h3><p data-i="step1_body">Chizma, fotosurat yoki namunani va muammo tavsifini yuboring.</p></div><div class="process-step"><span class="num">02</span><h3 data-i="step2_title">Baholash</h3><p data-i="step2_body">Material, o‘lcham va texnologiyani ko‘rib chiqib, narx hamda muddatni kelishamiz.</p></div><div class="process-step"><span class="num">03</span><h3 data-i="step3_title">Ishlov va ta’mir</h3><p data-i="step3_body">Kelishilgan chizma yoki texnik topshiriq bo‘yicha ishlov beramiz.</p></div><div class="process-step"><span class="num">04</span><h3 data-i="step4_title">Nazorat</h3><p data-i="step4_body">Tayyor detalning kelishilgan o‘lchamlari va holatini tekshirib topshiramiz.</p></div></div></div></section>
+    <section class="section visuals" id="visuals" aria-labelledby="visuals-title"><div class="container"><div class="section-head"><div><div class="section-code">04 / VISUALS</div><h2 id="visuals-title" data-i="visuals_title">Jarayonlar ko‘rinishi</h2></div><p class="section-intro" data-i="visuals_intro">Aniq ishlov va sirtni yakunlash talab qiladigan vazifalarga e’tibor qaratamiz.</p></div><div class="visual-grid"><figure><img src="assets/mold-finishing-illustration.webp" alt="Qolip sirtini tekshirish va polishing jarayonining illyustrativ tasviri" loading="lazy" width="1536" height="1024"><figcaption><span data-i="visual1">Qolip yuzasiga yakuniy ishlov</span><small data-i="illustrative">Illyustrativ tasvir</small></figcaption></figure><figure><img src="assets/mold-cnc-illustration.webp" alt="CNC frezalash jarayonining illyustrativ tasviri" loading="lazy" width="1672" height="941"><figcaption><span data-i="visual2">CNC orqali qolipga ishlov</span><small data-i="illustrative">Illyustrativ tasvir</small></figcaption></figure></div><p class="visual-note" data-i="visual_note">Tasvirlar xizmat jarayonlarini ifodalaydi; kompaniyaning bajarilgan ishlaridan olingan foto hisobot emas.</p></div></section>
+    <section class="section contact-band" id="contact" aria-labelledby="contact-title"><div class="container contact-content"><div><div class="section-code">05 / CONTACT</div><h2 id="contact-title" data-i="contact_title">Chizmangiz bormi? Vazifani muhokama qilaylik.</h2><p data-i="contact_intro">Detal turi, material, o‘lcham, miqdor va kerakli muddatni yozing. Muhandislik bahosi va tijorat taklifi uchun siz bilan bog‘lanamiz.</p><div class="contact-actions"><a class="button button-primary" href="mailto:2682323@gmail.com?subject=INTECH%20Engineering%20-%20texnik%20so%27rov"><span data-i="email_cta">Email orqali so‘rov</span><span class="arrow" aria-hidden="true">↗</span></a><a class="button button-outline" href="tel:+998902682323" data-i="call_cta">Qo‘ng‘iroq qilish</a></div></div><div class="contact-info"><div class="contact-row"><span data-i="label_phone">Telefon</span><a href="tel:+998902682323">+998 90 268 23 23</a></div><div class="contact-row"><span>Email</span><a href="mailto:2682323@gmail.com">2682323@gmail.com</a></div><div class="contact-row"><span data-i="label_location">Manzil</span><a href="https://www.google.com/maps/search/?api=1&amp;query=Industrial%20ko%27chasi%201%2F22%2C%20Andijon%2C%20Uzbekistan" target="_blank" rel="noopener noreferrer" data-i="address">Industrial ko‘chasi 1/22, Andijon</a></div></div></div></section>
+  </main>
+  <footer class="footer"><div class="container footer-inner"><span>© <span id="year">2026</span> INTECH TA’MINOT MCHJ · Andijon, Uzbekistan</span><div class="footer-links"><a href="https://www.instagram.com/intech.cnc" target="_blank" rel="noopener noreferrer">Instagram</a><a href="mailto:2682323@gmail.com" data-i="footer_contact">Aloqa</a><a href="#top" data-i="back_top">Yuqoriga ↑</a></div></div></footer>
+  <script>
+    const translations={
+      uz:{skip:"Asosiy tarkibga o‘tish",nav_services:"Xizmatlar",nav_capabilities:"Imkoniyatlar",nav_process:"Ish jarayoni",nav_contact:"Aloqa",nav_rfq:"So‘rov yuborish",hero_eyebrow:"ANDIJON · QOLIP VA ANIQ ISHLOV",hero_title:["Qolip ta’miri.","Aniqlik bilan ishlab chiqarish."],hero_lead:"Plastmassa qoliplari va shtamp detallarini ta’mirlash, tayyorlash hamda CNC va EDM orqali ishlov berish bo‘yicha muhandislik xizmati.",hero_cta:"Texnik so‘rov yuborish",hero_more:"Xizmatlarni ko‘rish",hero_experience:"20+ yil",hero_legacy:"ustaxona tajribasi · Andijon, O‘zbekiston",illustrative:"Illyustrativ tasvir",services_title:"Qoliplar uchun to‘liq ishlov zanjiri",services_intro:"Nosozlikni aniqlashdan detalni tiklash yoki yangisini tayyorlashgacha kerakli jarayonlarni bir joyda birlashtiramiz.",service1_title:"Qolip ta’miri",service1_body:"Plastmassa qoliplarini diagnostika qilish, yeyilgan joylarni tiklash, sovitish kanallari va ejektor tizimini ko‘rib chiqish.",service2_title:"CNC frezalash va tokarlik",service2_body:"Chizma yoki namuna asosida qolip, shtamp va boshqa aniq mexanik detallarni tayyorlash.",service3_title:"Elektroeroziya ishlovi",service3_body:"Wire cut, die sinking va EDM drilling yordamida murakkab kontur, kovak va mayda teshiklar hosil qilish.",service4_title:"Polishing va silliqlash",service4_body:"Qolip yuzasini polishing qilish va yassi silliqlash orqali yakuniy ishlov berish.",service5_title:"Aniq payvandlash",service5_body:"Qolipning zararlangan yoki yeyilgan qismlarini precision welding orqali tiklash.",service6_title:"Qolip va shtamp detallari",service6_body:"Insert, puanson, ejektor va boshqa komponentlarni loyiha talablariga muvofiq tayyorlash.",cap_title:"Bir detal. Bir nechta texnologiya.",cap_intro:"Jarayonni detal geometriyasi, material va talab etilgan aniqlikka qarab tanlaymiz. Narx hamda ishlab chiqarish muddati texnik ma’lumotlar ko‘rib chiqilgach kelishiladi.",machine1:"4 o‘qli CNC frezalash · Mitsubishi M80",machine2:"Wire EDM kesish",machine3:"Die sinking EDM",machine4:"EDM drilling",machine5:"Yassi silliqlash",machine6:"Precision welding · SW-V01",process_title:"So‘rovdan tayyor detalga",process_intro:"Har bir buyurtma chizma, material va texnik talablar asosida alohida baholanadi.",step1_title:"Texnik so‘rov",step1_body:"Chizma, fotosurat yoki namunani va muammo tavsifini yuboring.",step2_title:"Baholash",step2_body:"Material, o‘lcham va texnologiyani ko‘rib chiqib, narx hamda muddatni kelishamiz.",step3_title:"Ishlov va ta’mir",step3_body:"Kelishilgan chizma yoki texnik topshiriq bo‘yicha ishlov beramiz.",step4_title:"Nazorat",step4_body:"Tayyor detalning kelishilgan o‘lchamlari va holatini tekshirib topshiramiz.",visuals_title:"Jarayonlar ko‘rinishi",visuals_intro:"Aniq ishlov va sirtni yakunlash talab qiladigan vazifalarga e’tibor qaratamiz.",visual1:"Qolip yuzasiga yakuniy ishlov",visual2:"CNC orqali qolipga ishlov",visual_note:"Tasvirlar xizmat jarayonlarini ifodalaydi; kompaniyaning bajarilgan ishlaridan olingan foto hisobot emas.",contact_title:"Chizmangiz bormi? Vazifani muhokama qilaylik.",contact_intro:"Detal turi, material, o‘lcham, miqdor va kerakli muddatni yozing. Muhandislik bahosi va tijorat taklifi uchun siz bilan bog‘lanamiz.",email_cta:"Email orqali so‘rov",call_cta:"Qo‘ng‘iroq qilish",label_phone:"Telefon",label_location:"Manzil",address:"Industrial ko‘chasi 1/22, Andijon",footer_contact:"Aloqa",back_top:"Yuqoriga ↑"},
+      uz_cy:{skip:"Асосий таркибга ўтиш",nav_services:"Хизматлар",nav_capabilities:"Имкониятлар",nav_process:"Иш жараёни",nav_contact:"Алоқа",nav_rfq:"Сўров юбориш",hero_eyebrow:"АНДИЖОН · ҚОЛИП ВА АНИҚ ИШЛОВ",hero_title:["Қолип таъмири.","Аниқлик билан ишлаб чиқариш."],hero_lead:"Пластмасса қолиплари ва штамп деталларини таъмирлаш, тайёрлаш ҳамда CNC ва EDM орқали ишлов бериш бўйича муҳандислик хизмати.",hero_cta:"Техник сўров юбориш",hero_more:"Хизматларни кўриш",hero_experience:"20+ йил",hero_legacy:"устахона тажрибаси · Андижон, Ўзбекистон",illustrative:"Иллюстратив тасвир",services_title:"Қолиплар учун тўлиқ ишлов занжири",services_intro:"Носозликни аниқлашдан детални тиклаш ёки янгисини тайёрлашгача керакли жараёнларни бир жойда бирлаштирамиз.",service1_title:"Қолип таъмири",service1_body:"Пластмасса қолипларини диагностика қилиш, ейилган жойларни тиклаш, совитиш каналлари ва эжектор тизимини кўриб чиқиш.",service2_title:"CNC фрезалаш ва токарлик",service2_body:"Чизма ёки намуна асосида қолип, штамп ва бошқа аниқ механик деталларни тайёрлаш.",service3_title:"Электроэрозия ишлови",service3_body:"Wire cut, die sinking ва EDM drilling ёрдамида мураккаб контур, ковак ва майда тешиклар ҳосил қилиш.",service4_title:"Polishing ва силлиқлаш",service4_body:"Қолип юзасини polishing қилиш ва ясси силлиқлаш орқали якуний ишлов бериш.",service5_title:"Аниқ пайвандлаш",service5_body:"Қолипнинг зарарланган ёки ейилган қисмларини precision welding орқали тиклаш.",service6_title:"Қолип ва штамп деталлари",service6_body:"Инсерт, пуансон, эжектор ва бошқа компонентларни лойиҳа талабларига мувофиқ тайёрлаш.",cap_title:"Бир детал. Бир нечта технология.",cap_intro:"Жараённи детал геометрияси, материал ва талаб этилган аниқликка қараб танлаймиз. Нарх ҳамда ишлаб чиқариш муддати техник маълумотлар кўриб чиқилгач келишилади.",machine1:"4 ўқли CNC фрезалаш · Mitsubishi M80",machine2:"Wire EDM кесиш",machine3:"Die sinking EDM",machine4:"EDM drilling",machine5:"Ясси силлиқлаш",machine6:"Precision welding · SW-V01",process_title:"Сўровдан тайёр деталга",process_intro:"Ҳар бир буюртма чизма, материал ва техник талаблар асосида алоҳида баҳоланади.",step1_title:"Техник сўров",step1_body:"Чизма, фотосурат ёки намунани ва муаммо тавсифини юборинг.",step2_title:"Баҳолаш",step2_body:"Материал, ўлчам ва технологияни кўриб чиқиб, нарх ҳамда муддатни келишамиз.",step3_title:"Ишлов ва таъмир",step3_body:"Келишилган чизма ёки техник топшириқ бўйича ишлов берамиз.",step4_title:"Назорат",step4_body:"Тайёр деталнинг келишилган ўлчамлари ва ҳолатини текшириб топширамиз.",visuals_title:"Жараёнлар кўриниши",visuals_intro:"Аниқ ишлов ва сиртни якунлаш талаб қиладиган вазифаларга эътибор қаратамиз.",visual1:"Қолип юзасига якуний ишлов",visual2:"CNC орқали қолипга ишлов",visual_note:"Тасвирлар хизмат жараёнларини ифодалайди; компаниянинг бажарилган ишларидан олинган фотоҳисобот эмас.",contact_title:"Чизмангиз борми? Вазифани муҳокама қилайлик.",contact_intro:"Детал тури, материал, ўлчам, миқдор ва керакли муддатни ёзинг. Муҳандислик баҳоси ва тижорат таклифи учун сиз билан боғланамиз.",email_cta:"Email орқали сўров",call_cta:"Қўнғироқ қилиш",label_phone:"Телефон",label_location:"Манзил",address:"Индустриал кўчаси 1/22, Андижон",footer_contact:"Алоқа",back_top:"Юқорига ↑"},
+      ru:{skip:"Перейти к содержимому",nav_services:"Услуги",nav_capabilities:"Возможности",nav_process:"Процесс",nav_contact:"Контакты",nav_rfq:"Отправить запрос",hero_eyebrow:"АНДИЖАН · ПРЕСС-ФОРМЫ И ТОЧНАЯ ОБРАБОТКА",hero_title:["Ремонт пресс-форм.","Производство с точностью."],hero_lead:"Инженерные услуги по ремонту и изготовлению деталей пресс-форм и штампов с применением CNC и EDM обработки.",hero_cta:"Отправить технический запрос",hero_more:"Смотреть услуги",hero_experience:"20+ лет",hero_legacy:"опыта мастерской · Андижан, Узбекистан",illustrative:"Иллюстрация",services_title:"Комплексная обработка пресс-форм",services_intro:"Объединяем необходимые процессы: от диагностики неисправности до восстановления или изготовления новой детали.",service1_title:"Ремонт пресс-форм",service1_body:"Диагностика литьевых форм, восстановление изношенных участков, проверка каналов охлаждения и системы выталкивания.",service2_title:"Фрезерная и токарная CNC обработка",service2_body:"Изготовление деталей пресс-форм, штампов и точной механики по чертежу или образцу.",service3_title:"Электроэрозионная обработка",service3_body:"Wire cut, прошивная EDM и EDM сверление для сложных контуров, полостей и малых отверстий.",service4_title:"Полировка и шлифование",service4_body:"Финишная обработка поверхностей пресс-форм, полировка и плоское шлифование.",service5_title:"Прецизионная сварка",service5_body:"Восстановление повреждённых и изношенных участков пресс-форм методом точной сварки.",service6_title:"Детали пресс-форм и штампов",service6_body:"Изготовление вставок, пуансонов, выталкивателей и других компонентов по требованиям проекта.",cap_title:"Одна деталь. Несколько технологий.",cap_intro:"Подбираем процесс с учётом геометрии, материала и требуемой точности. Стоимость и срок согласовываются после изучения технических данных.",machine1:"4-осевое CNC фрезерование · Mitsubishi M80",machine2:"Проволочная EDM резка",machine3:"Прошивная EDM",machine4:"EDM сверление",machine5:"Плоское шлифование",machine6:"Прецизионная сварка · SW-V01",process_title:"От запроса до готовой детали",process_intro:"Каждый заказ оценивается отдельно по чертежу, материалу и техническим требованиям.",step1_title:"Технический запрос",step1_body:"Отправьте чертёж, фотографию или образец и описание задачи.",step2_title:"Оценка",step2_body:"Изучим материал, размеры и технологию, затем согласуем стоимость и срок.",step3_title:"Обработка и ремонт",step3_body:"Выполним работу по согласованному чертежу или техническому заданию.",step4_title:"Контроль",step4_body:"Проверим согласованные размеры и состояние детали перед передачей.",visuals_title:"Технологии в фокусе",visuals_intro:"Работаем с задачами, где важны точная обработка и качество поверхности.",visual1:"Финишная обработка поверхности формы",visual2:"CNC обработка пресс-формы",visual_note:"Изображения иллюстрируют процессы и не являются фотоотчётом о выполненных заказах компании.",contact_title:"Есть чертёж? Обсудим задачу.",contact_intro:"Укажите тип детали, материал, размеры, количество и желаемый срок. Свяжемся с вами для инженерной оценки и коммерческого предложения.",email_cta:"Запрос по email",call_cta:"Позвонить",label_phone:"Телефон",label_location:"Адрес",address:"ул. Индустриальная 1/22, Андижан",footer_contact:"Контакты",back_top:"Наверх ↑"},
+      en:{skip:"Skip to content",nav_services:"Services",nav_capabilities:"Capabilities",nav_process:"Process",nav_contact:"Contact",nav_rfq:"Send inquiry",hero_eyebrow:"ANDIJON · MOLD & PRECISION MACHINING",hero_title:["Mold repair.","Precision in every part."],hero_lead:"Engineering services for repair and production of injection mold and die components, using CNC and EDM machining.",hero_cta:"Send a technical inquiry",hero_more:"Explore services",hero_experience:"20+ years",hero_legacy:"of workshop experience · Andijon, Uzbekistan",illustrative:"Illustrative image",services_title:"Integrated mold and die services",services_intro:"We combine the processes needed to diagnose a defect, restore a component or manufacture a replacement.",service1_title:"Injection mold repair",service1_body:"Mold diagnostics, restoration of worn areas, and inspection of cooling channels and ejector systems.",service2_title:"CNC milling and turning",service2_body:"Mold, die and precision mechanical components made from drawings or physical samples.",service3_title:"EDM machining",service3_body:"Wire cut, die sinking and EDM drilling for intricate contours, cavities and small holes.",service4_title:"Polishing and grinding",service4_body:"Mold surface finishing, polishing and precision surface grinding.",service5_title:"Precision welding",service5_body:"Restoration of damaged or worn mold areas using precision welding.",service6_title:"Mold and die components",service6_body:"Inserts, punches, ejectors and other components produced to project requirements.",cap_title:"One part. Multiple processes.",cap_intro:"We select the process around geometry, material and tolerance requirements. Price and lead time are confirmed after technical review.",machine1:"4-axis CNC milling · Mitsubishi M80",machine2:"Wire EDM cutting",machine3:"Die sinking EDM",machine4:"EDM drilling",machine5:"Surface grinding",machine6:"Precision welding · SW-V01",process_title:"From inquiry to finished part",process_intro:"Each project is assessed individually against drawings, material and technical requirements.",step1_title:"Technical inquiry",step1_body:"Send a drawing, photo or sample with a description of the task.",step2_title:"Assessment",step2_body:"We review the material, dimensions and process, then agree on price and lead time.",step3_title:"Machining and repair",step3_body:"We work to the agreed drawing or technical brief.",step4_title:"Inspection",step4_body:"We check agreed dimensions and condition before handover.",visuals_title:"A closer look at the process",visuals_intro:"We focus on work that calls for precise machining and careful surface finishing.",visual1:"Mold surface finishing",visual2:"CNC mold machining",visual_note:"Images illustrate processes; they are not photographs of completed INTECH projects.",contact_title:"Have a drawing? Let’s discuss the job.",contact_intro:"Share the part type, material, dimensions, quantity and target date. We will contact you for an engineering assessment and quotation.",email_cta:"Email your inquiry",call_cta:"Call us",label_phone:"Phone",label_location:"Address",address:"1/22 Industrial Street, Andijon",footer_contact:"Contact",back_top:"Back to top ↑"}
+    };
+    const accessible={
+      uz:{menuOpen:'Menyuni ochish',menuClose:'Menyuni yopish',nav:'Asosiy menyu',languages:'Til tanlash',home:'INTECH Engineering — bosh sahifa',images:['CNC markazida ishlov berilayotgan metall qolipning illyustrativ tasviri','Wire EDM jarayonining illyustrativ tasviri','Qolip sirtini polishing qilishning illyustrativ tasviri','CNC frezalash jarayonining illyustrativ tasviri']},
+      uz_cy:{menuOpen:'Менюни очиш',menuClose:'Менюни ёпиш',nav:'Асосий меню',languages:'Тил танлаш',home:'INTECH Engineering — бош саҳифа',images:['CNC марказида қолипга ишлов беришнинг иллюстратив тасвири','Wire EDM жараёнининг иллюстратив тасвири','Қолип сиртини силлиқлашнинг иллюстратив тасвири','CNC фрезалаш жараёнининг иллюстратив тасвири']},
+      ru:{menuOpen:'Открыть меню',menuClose:'Закрыть меню',nav:'Главное меню',languages:'Выбор языка',home:'INTECH Engineering — главная',images:['Иллюстрация обработки металлической пресс-формы на CNC станке','Иллюстрация процесса Wire EDM','Иллюстрация полировки поверхности пресс-формы','Иллюстрация фрезерования пресс-формы на CNC станке']},
+      en:{menuOpen:'Open menu',menuClose:'Close menu',nav:'Main navigation',languages:'Select language',home:'INTECH Engineering — home',images:['Illustration of a metal mold being machined in a CNC center','Illustration of the Wire EDM process','Illustration of mold surface finishing','Illustration of CNC mold machining']}
+    };
+    const nav=document.getElementById('main-nav');
+    const menu=document.querySelector('.menu-toggle');
+    const langSelect=document.querySelector('.mobile-language');
+    function setLanguage(code){
+      const language=Object.hasOwn(translations,code)?code:'uz';
+      const t=translations[language];
+      document.documentElement.lang=language==='uz_cy'?'uz-Cyrl':language;
+      document.querySelectorAll('[data-i]').forEach(el=>{const key=el.dataset.i;if(t[key]!==undefined)el.textContent=t[key]});
+      const heading=document.querySelector('[data-i-html="hero_title"]');
+      heading.replaceChildren(document.createTextNode(t.hero_title[0]),document.createElement('br'),Object.assign(document.createElement('em'),{textContent:t.hero_title[1]}));
+      document.querySelectorAll('.languages button').forEach(button=>{const active=button.dataset.lang===language;button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active))});
+      langSelect.value=language;
+      const labels=accessible[language];
+      document.querySelector('.logo').setAttribute('aria-label',labels.home);
+      nav.setAttribute('aria-label',labels.nav);
+      document.querySelector('.languages').setAttribute('aria-label',labels.languages);
+      langSelect.setAttribute('aria-label',labels.languages);
+      menu.setAttribute('aria-label',nav.classList.contains('open')?labels.menuClose:labels.menuOpen);
+      document.querySelectorAll('main img').forEach((image,index)=>image.alt=labels.images[index]);
+      try{localStorage.setItem('intech-language',language)}catch{}
+    }
+    document.querySelectorAll('.languages button').forEach(button=>button.addEventListener('click',()=>setLanguage(button.dataset.lang)));
+    langSelect.addEventListener('change',()=>setLanguage(langSelect.value));
+    menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?accessible[langSelect.value].menuClose:accessible[langSelect.value].menuOpen)});
+    nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label',accessible[langSelect.value].menuOpen)}));
+    document.getElementById('year').textContent=new Date().getFullYear();
+    let initial='uz';try{initial=localStorage.getItem('intech-language')||'uz'}catch{}
+    setLanguage(initial);
+  </script>
 </body>
 </html>
