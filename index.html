@@ -84,6 +84,18 @@ section{padding:83px 0;border-bottom:1px solid var(--line)}#services,#equipment,
 @media(max-width:760px){html{scroll-padding-top:114px}.wrap{padding:0 20px}.hbar{height:auto;min-height:68px;padding-top:12px;padding-bottom:0;flex-wrap:wrap;justify-content:space-between;row-gap:8px}nav{order:3;display:flex;width:100%;overflow-x:auto;gap:18px;margin-left:0;padding:0 0 11px;scrollbar-width:none}nav::-webkit-scrollbar{display:none}nav a{font-size:12px}.langs{margin-left:auto}.hero{padding:75px 0 24px;min-height:0;background-position:59% center}.hero::before{background:linear-gradient(90deg,rgba(6,18,30,.97),rgba(6,18,30,.79) 65%,rgba(6,18,30,.47))}.hero h1{font-size:clamp(38px,7.5vw,57px)}.hero p{font-size:15px}.stats{margin-top:53px;grid-template-columns:repeat(2,1fr)}.stats div:nth-child(2){border-right:0}.stats div:nth-child(-n+2){border-bottom:1px solid #a0b9c044}section{padding:65px 0}.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.step:nth-child(2){border-right:0}.step:nth-child(-n+2){border-bottom:1px solid var(--line)}.contact{grid-template-columns:1fr}.dim{gap:10px;flex-wrap:wrap}.dim .arr.r{display:none}.dim .tol{margin-left:auto}.dim h2{white-space:normal}}
 @media(max-width:520px){.wrap{padding:0 17px}.logo{font-size:17px}.logo img{width:29px}.langs{padding-left:6px;gap:0}.langs button{padding:7px 5px;font-size:10px}.hero{padding-top:67px;background-position:63% center}.hero h1{font-size:clamp(35px,10vw,48px)}.hero .cta{gap:9px}.btn{padding:10px 15px;font-size:12px}.stats div{padding:15px}.stats b{font-size:25px}.eyebrow{font-size:10px}.dim h2{font-size:30px}.dim .tol{width:100%;margin-left:40px}.cards,.gal,.steps{grid-template-columns:1fr}.card{min-height:0}.step{border-right:0;border-bottom:1px solid var(--line)!important;padding:20px}.step:last-child{border-bottom:0!important}.step .n{margin-bottom:14px}.ph{min-height:240px}.crow{display:block}.crow .k{display:block;margin-bottom:3px}footer{display:block}footer span{display:block;margin:0 0 5px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+
+/* Client identities: local original assets, readable at every screen size. */
+.clients{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.client-card{min-width:0;min-height:190px;background:#fff;border:1px solid #d9e5e8;border-radius:14px;padding:24px 18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;box-shadow:0 8px 22px #00000012}
+.client-logo{width:100%;height:76px;display:flex;align-items:center;justify-content:center}
+.client-logo img{display:block;max-width:100%;max-height:76px;width:auto;height:auto;object-fit:contain}
+.clients .client-card span{padding:0;border:0;background:none;color:#173a47;text-align:center;font:700 18px/1.35 var(--body);letter-spacing:.02em;overflow-wrap:anywhere}
+.client-card--text{background:#f0f6f7;position:relative}
+.client-card--text:before{content:"";width:36px;height:3px;background:var(--accent);border-radius:3px;margin-bottom:2px}
+.clients .client-card--text span{font-size:23px}
+@media(max-width:900px){.clients{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:600px){.clients{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.client-card{min-height:168px;padding:20px 12px;gap:18px}.client-logo,.client-logo img{max-height:64px}.clients .client-card span{font-size:16px}.clients .client-card--text span{font-size:20px}}
 </style>
 </head>
 <body>
@@ -217,10 +229,20 @@ section{padding:83px 0;border-bottom:1px solid var(--line)}#services,#equipment,
     <div class="dim"><span class="arr l"></span><h2 data-i="c_title"></h2><span class="tol">SEC.05 / REF</span><span class="arr r"></span></div>
     <p data-i="c_p" style="color:var(--steel);max-width:640px;margin-bottom:22px"></p>
     <div class="clients">
-      <span>UZ KORAM</span><span>UZ SAEMYUNG</span><span>UZ DONG YANG</span>
-      <span>UZ CLIMATE CONTROL</span><span>UZ ERAE ALTERNATOR</span>
-      <span>OLTINKO'L PLAST</span><span>UZ METR TECH</span><span>UZ CHASSIS</span>
-    </div>
+<div class="client-card client-card--text"><span>UZ KORAM</span></div>
+<div class="client-card client-card--text"><span>UZ SAEMYUNG</span></div>
+<div class="client-card"><div class="client-logo"><img src="assets/clients/uz-dong-yang.jpg" alt="UZ DONG YANG logotipi" loading="lazy" decoding="async"></div><span>UZ DONG YANG</span></div>
+<div class="client-card"><div class="client-logo"><img src="assets/clients/climate-control.jpg" alt="UZ CLIMATE CONTROL logotipi" loading="lazy" decoding="async"></div><span>UZ CLIMATE CONTROL</span></div>
+<div class="client-card client-card--text"><span>UZ ERAE ALTERNATOR</span></div>
+<div class="client-card client-card--text"><span>OLTINKO'L PLAST</span></div>
+<div class="client-card"><div class="client-logo"><img src="assets/clients/uz-meter-tech.png" alt="UZ METR TECH logotipi" loading="lazy" decoding="async"></div><span>UZ METR TECH</span></div>
+<div class="client-card client-card--text"><span>UZ CHASSIS</span></div>
+<div class="client-card"><div class="client-logo"><img src="assets/clients/gm-uzbekistan.jpg" alt="GM UZBEKISTAN logotipi" loading="lazy" decoding="async"></div><span>GM UZBEKISTAN</span></div>
+<div class="client-card"><div class="client-logo"><img src="assets/clients/adm.png" alt="ADM JIZZAH logotipi" loading="lazy" decoding="async"></div><span>ADM JIZZAH</span></div>
+<div class="client-card"><div class="client-logo"><img style="background:#13232e;border-radius:8px;padding:9px" src="assets/clients/byd.svg" alt="BYD UZBEKISTAN logotipi" loading="lazy" decoding="async"></div><span>BYD UZBEKISTAN</span></div>
+<div class="client-card"><div class="client-logo"><img src="assets/clients/kia.svg" alt="KIA UZBEKISTAN logotipi" loading="lazy" decoding="async"></div><span>KIA UZBEKISTAN</span></div>
+<div class="client-card client-card--text"><span>UZ K&amp;M MOTORS</span></div>
+</div>
   </div>
 </section>
 
