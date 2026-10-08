@@ -9,3 +9,9 @@ Original logo sources — retrieved 2026-10-07
 - byd.svg: https://bydfactory.uz/footer-logo.svg
 
 Other client identities remain text only until their original logos can be verified. Names supplied by site owner are preserved.
+
+User-supplied logos — added 2026-10-08:
+- uz-km-motors.jpg: photo_2026-10-08_15-57-41.jpg
+- uz-koram.webp: image(3).png, web-optimized format conversion
+- uzchasys.webp: sticker.webp
+- uz-erae-alternator.png: image(4).png (UEA)
