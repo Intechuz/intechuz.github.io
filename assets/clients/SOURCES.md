@@ -15,3 +15,4 @@ User-supplied logos — added 2026-10-08:
 - uz-koram.webp: image(3).png, web-optimized format conversion
 - uzchasys.webp: sticker.webp
 - uz-erae-alternator.png: image(4).png (UEA)
+- kwangjin-autosystems.png: image(6).png, supplied by site owner
